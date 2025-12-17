@@ -60,7 +60,7 @@ function Navigation() {
       active: false,
       subMenu: [
         { name: "About Us", link: "/aboutUs" },
-        { name: "Our Supports", link: "/ourSupport" },
+        { name: "Our Supporters", link: "/ourSupport" },
       ],
     },
     {
@@ -158,7 +158,7 @@ function Navigation() {
           open ? "block" : "hidden"
         } font-opensans font-light text-xl text-center py-8 bg-white rounded-b-2xl`}
       >
-        <ul className="flex flex-col justify-center gap-5 text-right px-10 text-black">
+        <ul className="flex flex-col font-body justify-center gap-5 text-right px-10 text-black">
           {navbarItems.map((item, index) => (
             <a
               key={index}

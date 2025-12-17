@@ -16,7 +16,7 @@ const SupportPage = (): React.ReactNode => {
       <div
         className={`w-full h-[800px] md:h-screen bg-auto flex flex-col justify-center bg-blend-multiply bg-[#002366] items-center bg-top bg-no-repeat relative support`}
       >
-        <div className="font-head font-semibold text-shadow-lg mb-4 text-white text-5xl md:text-7xl lg:text-8xl">
+        <div className="font-head px-10 text-center font-semibold text-shadow-lg mb-4 text-white text-5xl md:text-7xl lg:text-8xl">
           Our Supporters
         </div>
         <div className="font-body text-white px-10 lg:px-0 md:max-w-[100ch] text-shadow-lg mt-2 mx-auto text-[20px] text-center">
