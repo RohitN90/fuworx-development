@@ -80,7 +80,7 @@ function Navigation() {
       active: false,
       subMenu: [
         { name: "About Us", link: "/aboutUs" },
-        { name: "Our Services", link: "/ourService" },
+        { name: "Our Supports", link: "/ourSupport" },
       ],
     },
     {
@@ -93,7 +93,9 @@ function Navigation() {
       active: false,
     },
     { name: "Product", link: "/product", active: false },
+    { name: "Partners", link: "/partners", active: false },
     { name: "Careers", link: "/careers", active: false },
+    { name: "Flow", link: "/flow", active: false },
   ];
 
   return (
@@ -119,7 +121,7 @@ function Navigation() {
             <Link
               key={index}
               href={itmes.link}
-              className="relative group flex items-center gap-2 text-2xl font-semibold font-head text-[#26638]"
+              className={`relative  group flex items-center gap-2 text-2xl ${path === itmes.link ? "text-[#63C7B2]" : " "} font-semibold font-head text-[#26638]`}
             >
               <div className="flex cursor-pointer items-center gap-2">
                 <span>{itmes.name}</span>
@@ -134,7 +136,7 @@ function Navigation() {
                       <Link
                         key={sub.name}
                         href={`${itmes.link}${sub.link}`}
-                        className="flex text-left w-full cursor-pointer text-xl items-start px-5 py-3"
+                        className={`flex text-left w-full ${path === itmes.link + sub.link ? "text-[#63c7B2] " : " "} cursor-pointer text-xl items-start px-5 py-3`}
                       >
                         {sub.name}
                       </Link>
@@ -148,9 +150,12 @@ function Navigation() {
         </div>
         <div className="hidden md:block hover:scale-110 ease-linear duration-200 transition-all">
           <div className="bg-[#0A1F44] px-4 py-2 md:px-8 md:py-2 rounded-2xl">
-            <div className="font-head text-[14px] md:text-[18px] font-bold">
+            <Link
+              href={"/contact"}
+              className="font-head text-[14px] md:text-[18px] font-bold"
+            >
               Contact
-            </div>
+            </Link>
           </div>
         </div>
         {open ? (

@@ -29,6 +29,34 @@
   .flex-center {
     @apply flex items-center;
   }
+
+  .carrers {
+    @apply bg-[url(../public/Updated/careers.jpg)];
+  }
+
+  .support {
+    @apply bg-[url(../public/Updated/supports.jpg)];
+  }
+
+  .contact {
+    @apply bg-[url(../public/Updated/contactImg.jpg)];
+  }
+
+  .vision-clip {
+    clip-path: polygon(0 0, 70% 0, 30% 100%, 0 100%);
+  }
+
+  .mission-clip {
+    clip-path: polygon(70% 0, 100% 0, 100% 100%, 30% 100%);
+  }
+
+  .divider-clip {
+    clip-path: polygon(68% 0, 72% 0, 32% 100%, 28% 100%);
+  }
+
+  .business {
+    @apply bg-[url(../public/office-desk.jpg)];
+  }
 }
 
 @media (prefers-color-scheme: dark) {

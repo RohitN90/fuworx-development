@@ -178,7 +178,7 @@
 
 "@emnapi/wasi-threads@1.1.0", "@emnapi/wasi-threads@^1.1.0":
   version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@emnapi/wasi-threads/-/wasi-threads-1.1.0.tgz#60b2102fddc9ccb78607e4a3cf8403ea69be41bf"
+  resolved "https://registry.npmjs.org/@emnapi/wasi-threads/-/wasi-threads-1.1.0.tgz"
   integrity sha512-WI0DdZ8xFSbgMjR1sFsKABJ/C5OnRrjT06JXbZKexJGrDuPTzZdDYfFlsgcCXCyf+suG5QU2e/y1Wo2V/OapLQ==
   dependencies:
     tslib "^2.4.0"
@@ -1090,10 +1090,10 @@ balanced-match@^1.0.0:
   resolved "https://registry.npmjs.org/balanced-match/-/balanced-match-1.0.2.tgz"
   integrity sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==
 
-baseline-browser-mapping@^2.8.19, baseline-browser-mapping@^2.9.2:
-  version "2.9.2"
-  resolved "https://registry.npmjs.org/baseline-browser-mapping/-/baseline-browser-mapping-2.9.2.tgz"
-  integrity sha512-PxSsosKQjI38iXkmb3d0Y32efqyA0uW4s41u4IVBsLlWLhCiYNpH/AfNOVWRqCQBlD8TFJTz6OUWNd4DFJCnmw==
+baseline-browser-mapping@^2.8.19, baseline-browser-mapping@^2.9.8:
+  version "2.9.8"
+  resolved "https://registry.npmjs.org/baseline-browser-mapping/-/baseline-browser-mapping-2.9.8.tgz"
+  integrity sha512-Y1fOuNDowLfgKOypdc9SPABfoWXuZHBOyCS4cD52IeZBhr4Md6CLLs6atcxVrzRmQ06E7hSlm5bHHApPKR/byA==
 
 brace-expansion@^1.1.7:
   version "1.1.12"
@@ -2702,7 +2702,7 @@ react-is@^16.13.1:
 
 react-scroll@^1.9.3:
   version "1.9.3"
-  resolved "https://registry.npmjs.org/react-scroll/-/react-scroll-1.9.3.tgz"
+  resolved "https://registry.yarnpkg.com/react-scroll/-/react-scroll-1.9.3.tgz#8312831244a7a8f86036e72c71de155a454a78c0"
   integrity sha512-xv7FXqF3k63aSLNu4/NjFvRNI0ge7DmmmsbeGarP7LZVAlJMSjUuW3dTtLxp1Afijyv0lS2qwC0GiFHvx1KBHQ==
   dependencies:
     lodash.throttle "^4.1.1"

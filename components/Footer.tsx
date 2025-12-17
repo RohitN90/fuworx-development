@@ -108,7 +108,7 @@ export default function Footer() {
               <div>
                 <p className="flex items-center gap-2 text-lg text-gray-600">
                   <IoIosArrowForward className="text-xs" />
-                  <span>contact@fuworx.com</span>
+                  <span>info@fuworx.com</span>
                 </p>
               </div>
               <div>

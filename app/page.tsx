@@ -5,7 +5,10 @@ import Industry from "@/components/Industry";
 import OurServices from "@/components/OurServices";
 import WhyFuworx from "@/components/WhyFuworx";
 
+import { useRef } from "react";
+
 export default function Home() {
+  const goToContact = useRef<HTMLDivElement | null>(null);
   return (
     <>
       <Hero />
@@ -14,7 +17,9 @@ export default function Home() {
       </div>
       <Industry />
       <WhyFuworx />
-      <ContactForm />
+      <div>
+        <ContactForm />
+      </div>
     </>
   );
 }

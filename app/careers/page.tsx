@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import Walk from "@/public/Updated/careerWalk.jpg";
 
 interface FormData {
   name: string;
@@ -13,13 +14,35 @@ interface FormData {
 
 const Carres = () => {
   return (
-    <div className="w-full h-auto mx-auto grid">
-      <div className="bg-white pb-16">
+    <div className="flex flex-col">
+      <CarrerPage />
+      <div className="bg-white pb-20 md:pb-16">
         <WhyJoin />
       </div>
       <Positions />
       <SubmitResume />
     </div>
+  );
+};
+
+const CarrerPage = (): React.ReactNode => {
+  return (
+    <>
+      <div
+        className={`w-full h-[800px] md:h-screen bg-cover flex flex-col justify-center bg-blend-multiply bg-[#002366]/80 items-center bg-bottom bg-no-repeat relative carrers`}
+      >
+        <div className="font-head font-semibold text-shadow-lg mb-4 text-white text-5xl md:text-7xl lg:text-8xl">
+          Careers
+        </div>
+        <div className="font-body text-white px-10 lg:px-0 md:max-w-[100ch] text-shadow-lg mt-2 mx-auto text-[20px] text-center">
+          We’re building a place where people with passion, curiosity, and
+          ambition come together to create meaningful change. Here, you won’t
+          just do a job-you’ll shape solutions, influence ideas, and contribute
+          to the future of digital innovation
+        </div>
+        <div className="absolute bottom-0 border-none left-0 w-full h-[42px] mask-[url(../public/Updated/Wave.svg)] bg-white overflow-hidden"></div>
+      </div>
+    </>
   );
 };
 
@@ -54,32 +77,32 @@ export default Carres;
 const WhyJoin = (): React.ReactNode => {
   return (
     <>
-      <div className="w-full h-screen md:h-svh md:max-w-full flex flex-col items-center rounded-b-[300px] shadow-2xl bg-white justify-center">
-        <div className="font-head font-semibold text-[#002633] text-2xl md:text-5xl">
+      <div className="w-full h-[1200px] px-20  md:h-[1000px] lg:h-svh md:max-w-full  md:mt-16 flex flex-col items-center rounded-b-[300px] shadow-2xl bg-white justify-center">
+        <div className="font-head font-semibold text-[#002633] text-[40px] text-center  md:text-5xl">
           Why Join Fuworx
         </div>
-        <div className="grid grid-cols-2 text-[#002366] gap-6 mt-16 max-w-[1200px]">
-          <div className="flex flex-col gap-4">
-            <div className="mb-10">
+        <div className="flex flex-col lg:grid lg:grid-cols-2 text-[#002366] gap-6 mt-16 max-w-[1200px]">
+          <div className="flex flex-col text-center md:text-left justify-center gap-4">
+            <div className="mb-5 md:text-[20px]">
               At Fuworx,we’re more than a technology company we’re a team of
               innovators transforming the way businesses work. Our people are at
               the heart of everything we do, driving impact through creativity,
               collaboration, and smart technology.{" "}
             </div>
-            <div className="mb-10">
+            <div className="mb-5 md:text-[20px]">
               We believe in a culture built on freedom, curiosity, and
               ownership. Here, you’ll have the space to experiment, learn
               continuously, and solve real business challenges that make a
               difference.
             </div>
-            <div>
+            <div className="md:text-[20px]">
               With hands-on experience across diverse projects, and endless
               opportunities to grow, Fuworx is where your ideas evolve into
               meaningful outcomes and your career grows with purpose.
             </div>
           </div>
-          <div className="w-full h-full bg-[#002366] flex items-center justify-center">
-            <div className="text-white">Image Here</div>
+          <div className="w-full mt-4 max-w-[400px] mb-8 mx-auto md:max-w-[450px] md:mx-auto bg-[#002366] flex lg:items-end">
+            <img src={Walk.src} alt="Image" />
           </div>
         </div>
       </div>
@@ -185,7 +208,7 @@ const SubmitResume = (): React.ReactNode => {
 
 const JobCards = ({ props }: { props: JobType }) => {
   return (
-    <div className=" w-[300px] md:w-[900px] rounded-xl px-10 shadow-xl hover:shadow-2xl hover:scale-110 transition-all duration-200 ease-linear cursor-pointer py-5 border-2 border-solid border-[#002366] h-auto my-2 bg-white text-[#002366]">
+    <div className=" w-[310px] md:w-[600px] lg:w-[800px] rounded-xl px-10 shadow-xl hover:shadow-2xl hover:scale-110 transition-all duration-200 ease-linear cursor-pointer py-5 border-2 border-solid border-[#002366] h-auto my-2 bg-white text-[#002366]">
       <div className="flex justify-between">
         <div>
           <div className="md:text-3xl font-semibold font-head">
@@ -208,7 +231,7 @@ const JobCards = ({ props }: { props: JobType }) => {
 
 const Positions = (): React.ReactNode => {
   return (
-    <div className="w-full h-auto flex px-4 md:py-10 flex-col items-center bg-white">
+    <div className="w-full h-fit md:h-auto pt-10 flex px-4 md:py-10 flex-col items-center bg-white">
       <div className="flex flex-col justify-center items-center">
         <h1 className="text-3xl md:text-5xl font-semibold font-head text-[#002366]">
           Open Position
