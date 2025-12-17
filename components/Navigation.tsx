@@ -10,7 +10,6 @@ import { ChevronDown } from "lucide-react";
 
 function Navigation() {
   const [open, setOpen] = useState(false);
-  const [isVisible, setVisiable] = useState(true);
   const path = usePathname();
 
   const router = useRouter();
@@ -18,25 +17,6 @@ function Navigation() {
   const navigateToHome = () => {
     router.push("/");
   };
-
-  useEffect(() => {
-    let lastscroll = window.scrollY;
-    const controllScrolling = () => {
-      const currentScroll = window.scrollY;
-      if (currentScroll > lastscroll && currentScroll > 50) {
-        setVisiable(false);
-        setOpen(false);
-      } else {
-        setVisiable(true);
-      }
-
-      lastscroll = currentScroll;
-    };
-
-    window.addEventListener("scroll", controllScrolling);
-
-    return () => window.removeEventListener("scroll", controllScrolling);
-  }, []);
 
   const toggleOpen = () => {
     setOpen(!open);
@@ -100,9 +80,7 @@ function Navigation() {
 
   return (
     <div
-      className={`w-full h-auto z-10 transition-transform duration-300 ease-linear top-0 fixed ${
-        isVisible ? "translate-y-0" : "-translate-y-full"
-      }`}
+      className={`w-full h-auto z-10 transition-transform duration-300 ease-linear top-0 fixed`}
     >
       <div className="flex px-5 py-3 border-b border-white/20 bg-white shadow-lg backdrop-blur-md mx-auto justify-between items-center lg:px-16">
         <div ref={logo} className="flex flex-row items-center gap-2">
@@ -185,16 +163,31 @@ function Navigation() {
             <a
               key={index}
               href={`${item.link}`}
-              className={`hover:text-[#002366] hover:scale-105 py-2 text-shadow-sm ease-initial duration-200 ${
+              className={`hover:text-[#002366] font-semibold hover:scale-105 text-shadow-sm ease-initial duration-200 ${
                 path === item.link ? "text-[#63C7B2]" : " "
               }`}
             >
               {item.name}
+              {item.subMenu &&
+                item.subMenu.map((i, d) => (
+                  <a
+                    key={d}
+                    href={`${item.link}${i.link}`}
+                    className={`flex font-light justify-end hover:text-[#002366] hover:scale-105 py-2 text-shadow-sm ease-initial duration-200 ${
+                      path === i.link ? "text-[#63C7B2]" : " "
+                    }`}
+                  >
+                    {i.name}
+                  </a>
+                ))}
             </a>
           ))}
-          <button className="bg-[#0A1F44] cursor-pointer text-white font-body items-center hover:scale-105 text-shadow-sm ease-initial duration-200 text-center shadow-2xl px-6 py-2 rounded-3xl">
+          <Link
+            href={"/contact"}
+            className="bg-[#0A1F44] cursor-pointer text-white font-body items-center hover:scale-105 text-shadow-sm ease-initial duration-200 text-center shadow-2xl px-6 py-2 rounded-3xl"
+          >
             Contact
-          </button>
+          </Link>
         </ul>
       </div>
     </div>
