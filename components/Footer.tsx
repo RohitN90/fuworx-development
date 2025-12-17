@@ -1,8 +1,22 @@
+"use client";
 import React from "react";
-import { FaInstagram, FaLinkedin, FaXTwitter } from "react-icons/fa6";
+import {
+  FaInstagram,
+  FaLinkedin,
+  FaLocationDot,
+  FaXTwitter,
+} from "react-icons/fa6";
 import { IoIosArrowForward } from "react-icons/io";
-import Logo from "@/public/logo.jpg";
+import FuworxLogo from "@/public/Updated/FUWORX.svg";
+import { useRouter } from "next/navigation";
+import { FaPhoneAlt } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 export default function Footer() {
+  const router = useRouter();
+
+  const navigateToHome = () => {
+    router.push("/");
+  };
   return (
     <footer className="bg-white py-12 px-6 font-head">
       <div className="max-w-[1400px] mx-auto">
@@ -11,14 +25,13 @@ export default function Footer() {
           {/* Company Info Section */}
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <img
-                src={Logo.src}
-                alt="Logo"
-                className="w-14 h-14 border-none"
-              />
-              <div className="uppercase text-black/70 flex flex-col font-body">
-                <div className="font-bold text-[#0A1F44] text-2xl">fuworx</div>
-                <div className="tracking-[3px]">innovations</div>
+              <div className="flex flex-row items-center gap-2">
+                <img
+                  src={FuworxLogo.src}
+                  onClick={navigateToHome}
+                  alt="Logo"
+                  className="w-auto h-auto bg-cover border-none"
+                />
               </div>
             </div>
             <p className="text-lg text-gray-600 leading-relaxed font-body">
@@ -97,7 +110,7 @@ export default function Footer() {
             <div className="space-y-4">
               <div>
                 <p className="flex items-start gap-2 text-lg text-gray-600">
-                  <IoIosArrowForward className="text-xs mt-1" />
+                  <FaLocationDot className="text-5xl justify-start -mt-2.5" />
                   <span>
                     FUWORX INNOVATIONS PRIVATE LIMITED, 4th Floor, Bizness
                     Square, Jubilee Enclave Road, Shaikpet, Hyderabad, India,
@@ -107,31 +120,34 @@ export default function Footer() {
               </div>
               <div>
                 <p className="flex items-center gap-2 text-lg text-gray-600">
-                  <IoIosArrowForward className="text-xs" />
+                  <MdEmail className="text-xs" />
                   <span>info@fuworx.com</span>
                 </p>
               </div>
               <div>
                 <p className="flex items-center gap-2 text-lg text-gray-600">
-                  <IoIosArrowForward className="text-xs" />
+                  <FaPhoneAlt className="text-xs" />
                   <span>+91-8919980393</span>
                 </p>
               </div>
               <div className="flex gap-3 pt-2">
                 <a
-                  href="#"
+                  href="https://www.instagram.com/fuworx/"
+                  target="_blank"
                   className="w-8 h-8 bg-gray-800 rounded-3xl flex items-center justify-center hover:bg-teal-600 transition"
                 >
                   <FaInstagram className="text-white text-sm" />
                 </a>
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/company/fuworx-innovations/"
+                  target="_blank"
                   className="w-8 h-8 bg-gray-800 rounded-3xl flex items-center justify-center hover:bg-teal-600 transition"
                 >
                   <FaLinkedin className="text-white text-sm" />
                 </a>
                 <a
-                  href="#"
+                  href="https://x.com/fuworx"
+                  target="_blank"
                   className="w-8 h-8 bg-gray-800 rounded-3xl flex items-center justify-center hover:bg-teal-600 transition"
                 >
                   <FaXTwitter className="text-white text-sm" />

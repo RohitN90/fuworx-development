@@ -93,16 +93,20 @@ function Navigation() {
         </div>
         <div
           ref={navitmes}
-          className={`hidden md:flex gap-4 md:gap-10 text-[#0A1F44]`}
+          className={`hidden xl:flex px-5 gap-4 md:gap-10 text-[#0A1F44]`}
         >
           {navbarItems.map((itmes, index) => (
             <Link
               key={index}
               href={itmes.link}
-              className={`relative  group flex items-center gap-2 text-2xl ${path === itmes.link ? "text-[#63C7B2]" : " "} font-semibold font-head text-[#26638]`}
+              className={`relative  group flex items-center gap-2 md:text-2xl text-lg font-semibold font-head text-[#26638]`}
             >
               <div className="flex cursor-pointer items-center gap-2">
-                <span>{itmes.name}</span>
+                <span
+                  className={` ${path === itmes.link ? "text-[#63C7B2]" : " "} `}
+                >
+                  {itmes.name}
+                </span>
                 {itmes.subMenu && itmes.subMenu.length > 0 && (
                   <ChevronDown className="group-hover:rotate-180 transition-all duration-200" />
                 )}
@@ -126,7 +130,7 @@ function Navigation() {
             </Link>
           ))}
         </div>
-        <div className="hidden md:block hover:scale-110 ease-linear duration-200 transition-all">
+        <div className="hidden xl:block hover:scale-110 ease-linear duration-200 transition-all">
           <div className="bg-[#0A1F44] px-4 py-2 md:px-8 md:py-2 rounded-2xl">
             <Link
               href={"/contact"}
@@ -140,21 +144,21 @@ function Navigation() {
           <RxCross2
             color="black"
             onClick={toggleOpen}
-            className="md:hidden ease-initial"
+            className="xl:hidden ease-initial"
             size={25}
           />
         ) : (
           <RxHamburgerMenu
             color="black"
             onClick={toggleOpen}
-            className="md:hidden ease-linear"
+            className="xl:hidden ease-linear"
             size={25}
           />
         )}
       </div>
       <div
         ref={mobileNav}
-        className={`lg:hidden ${
+        className={`xl:hidden ${
           open ? "block" : "hidden"
         } font-opensans font-light text-xl text-center py-8 bg-white rounded-b-2xl`}
       >

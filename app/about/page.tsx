@@ -1,10 +1,10 @@
 import React from "react";
-const Product = () => {
+const AboutMain = () => {
   return (
     <div className="flex w-full h-screen justify-center items-center">
-      <div className="text-3xl ">Product page</div>
+      <div className="text-3xl ">About page</div>
     </div>
   );
 };
 
-export default Product;
+export default AboutMain;

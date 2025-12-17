@@ -37,9 +37,9 @@ function Hero() {
   return (
     <>
       {/* IMPORTANT: hero wrapper must be relative */}
-      <div className="relative w-full pt-20 md:pt-2 bg-[url(../public/Hero.png)] bg-cover bg-no-repeat bg-center bg-blend-multiply bg-[#002366]/80 md:bg-black/30 h-[700px]">
+      <div className="relative w-full pt-20 md:pt-2 bg-[url(../public/Hero.png)] bg-cover bg-top bg-no-repeat bg-blend-multiply bg-[#002366]/80 md:bg-black/30 h-[700px]">
         {/* HERO CONTENT */}
-        <div className="min-w-[200px] px-11 w-full mx-auto md:max-w-[1200px] flex justify-center items-center h-full">
+        <div className="min-w-[200px] px-11 w-full mx-auto md:max-w-[1200px] flex items-center h-full">
           <div className="flex flex-col md:flex md:justify-center md:text-center">
             <div
               ref={header}
@@ -65,7 +65,7 @@ function Hero() {
         </div>
 
         {/* WAVE AT BOTTOM */}
-        <div className="absolute bottom-0 left-0 w-full h-[42px] mask-[url(../public/Updated/Wave.svg)] bg-white overflow-hidden leading-none"></div>
+        <div className="absolute bottom-[-1px] left-0 w-full h-11 bg-white mask-[url(../public/Updated/Wave.svg)] mask-repeat" />
       </div>
     </>
   );

@@ -10,26 +10,26 @@ import {
 
 const Contact = () => {
   return (
-    <div className=" relative">
-      <div className="relative w-full px-10 py-20 mt-20 h-[650px] bg-blend-multiply bg-[#002366] flex flex-col gap-5 items-center contact bg-cover bg-top-left">
+    <div className=" relative bg-white">
+      <div className="relative w-full px-10 py-20 mt-20 h-[650px] bg-blend-multiply bg-[#002366]/90 flex flex-col gap-5 items-center contact bg-cover bg-top-left">
         <div className="text-white font-head text-center lg:text-left text-5xl md:text-6xl font-semibold">
           Contact Us Let’s Build Something Great Together
         </div>
 
-        <div className="max-w-[100ch] text-[20px] font-body mx-auto md:text-[18px] text-center">
+        <div className="max-w-[100ch] text-white text-[20px] font-body mx-auto md:text-[18px] text-center">
           Have questions, ideas, or looking to start your digital transformation
           journey? We’re here to help. Whether you&apos;re a growing SME,
           startup, or enterprise, our team at Fuworx is ready to support your
           tech goals.
         </div>
 
-        <div className="absolute bottom-0 left-0 w-full h-[42px] mask-[url(../public/Updated/Wave.svg)] bg-white overflow-hidden leading-none"></div>
+        <div className="absolute bottom-[-1px] left-0 w-full h-11 bg-white mask-[url(../public/Updated/Wave.svg)] mask-repeat" />
       </div>
-      <div className="relative w-full pb-10 bg-white md:h-[700px] flex flex-col justify-center items-center">
+      <div className="relative w-full h-screen pb-10 bg-white shadow-2xl md:h-[700px] xl:px-10 flex flex-col justify-center rounded-b-[350px] items-center">
         <ContactForm />
       </div>
 
-      <div className="md:absolute w-full md:pl-20 left-0 md:bottom-40">
+      <div className="xl:absolute w-full pt-12 xl:pl-20 left-0 md:bottom-40">
         <ContactCard />
       </div>
     </div>
@@ -38,10 +38,10 @@ const Contact = () => {
 
 const ContactCard = () => {
   return (
-    <section className="py-20 px-4 w-auto md:w-[550px] md:bg-[#002366] relative overflow-hidden rounded-4xl">
+    <section className="py-20 px-4 w-auto xl:w-[550px] bg-[#002366] relative overflow-hidden xl:rounded-4xl">
       <div className="absolute bottom-0 right-0 w-50 h-50 bg-green-500 rounded-full transform translate-x-10 -translate-y-[55px]"></div>
       <div className="absolute bottom-0 opacity-10 right-0 w-50 h-50 bg-green-500 rounded-full transform -translate-x-[45px] -translate-y-[95px]"></div>
-      <div className="md:max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="xl:max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="w-full md:max-w-2xl">
           <h2 className="text-5xl font-bold text-white mb-12 text-center">
             Contact
@@ -144,25 +144,29 @@ const ContactCard = () => {
             {/* Social Media Icons */}
             <div className="flex space-x-4 pt-4">
               <a
-                href="#"
+                href="https://x.com/fuworx"
+                target="_blank"
                 className="w-10 h-10 bg-white bg-opacity-10 backdrop-blur-sm rounded flex items-center justify-center hover:bg-opacity-20 transition"
               >
                 <FaXTwitter width={10} height={10} color="black" />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/fuworx/"
+                target="_blank"
                 className="w-10 h-10 bg-white bg-opacity-10 backdrop-blur-sm rounded flex items-center justify-center hover:bg-opacity-20 transition"
               >
                 <FaInstagram width={10} height={10} color="black" />
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/company/fuworx-innovations/"
+                target="_blank"
                 className="w-10 h-10 bg-white bg-opacity-10 backdrop-blur-sm rounded flex items-center justify-center hover:bg-opacity-20 transition"
               >
                 <FaLinkedinIn width={10} height={10} color="black" />
               </a>
               <a
                 href="#"
+                target="_blank"
                 className="w-10 h-10 bg-white bg-opacity-10 backdrop-blur-sm rounded flex items-center justify-center hover:bg-opacity-20 transition"
               >
                 <FaYoutube width={10} height={10} color="black" />
@@ -201,8 +205,8 @@ const ContactForm = (): React.ReactNode => {
   };
 
   return (
-    <div className=" relative flex flex-col w-full h-auto items-end px-10 md:px-20">
-      <form className="w-full grid items-center gap-4 max-w-[800px]">
+    <div className="relative flex flex-col w-full justify-center h-auto items-center xl:items-end px-10 md:px-20">
+      <form className="w-full flex flex-col justify-center items-center gap-4 md:max-w-[800px] xl:w-[500px] 2xl:w-[700px]">
         <div className="text-[#002366] my-10 font-head font-semibold text-center text-5xl">
           Quick Contact Form
         </div>

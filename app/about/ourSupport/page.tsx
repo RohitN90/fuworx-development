@@ -25,7 +25,7 @@ const SupportPage = (): React.ReactNode => {
           just do a job-you’ll shape solutions, influence ideas, and contribute
           to the future of digital innovation
         </div>
-        <div className="absolute bottom-0 border-none left-0 w-full h-[42px] mask-[url(../public/Updated/Wave.svg)] bg-white overflow-hidden"></div>
+        <div className="absolute bottom-[-1px] left-0 w-full h-11 bg-white mask-[url(../public/Updated/Wave.svg)] mask-repeat" />
       </div>
     </>
   );

@@ -37,12 +37,12 @@ function HoverCard(props: Props): React.ReactNode {
             {props.header}
           </div>
           <div
-            className={`absolute h-full w-[400px] md:w-full gap-2 bg-black/80 px-4 sm:px-6 md:px-8 mx-auto flex flex-col justify-center items-center text-left -bottom-10 opacity-0 md:group-hover:bottom-0 md:group-hover:opacity-100 duration-200 ease-linear ${isActive ? "!bottom-0 !opacity-100" : ""}`}
+            className={`absolute h-full w-full md:w-full gap-2 bg-black/80 px-4 sm:px-6 md:px-8 mx-auto flex flex-col justify-center items-center text-left -bottom-10 opacity-0 md:group-hover:bottom-0 md:group-hover:opacity-100 duration-200 ease-linear ${isActive ? "!bottom-0 !opacity-100" : ""}`}
           >
-            <h1 className="text-xl max-w-[20ch] md:max-w-full w-[400px] sm:text-3xl md:text-4xl text-left font-head font-semibold md:w-full">
+            <h1 className="text-xl max-w-[20ch] md:max-w-full w-[400px] sm:text-3xl md:text-4xl text-center font-head font-semibold md:w-full">
               {props.header}
             </h1>
-            <div className="font-body max-w-[70ch] mx-auto text-[12px] text-wrap sm:text-base md:text-[15px] text-white/90 font-semibold w-full">
+            <div className="font-body max-w-[70ch] text-center mx-auto text-[12px] text-wrap sm:text-base md:text-[15px] text-white/90 font-semibold w-full">
               {props.description}
             </div>
           </div>
