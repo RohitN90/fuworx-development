@@ -7,6 +7,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import Link from "next/link";
 import { ChevronDown } from "lucide-react";
+import { TiArrowSortedDown } from "react-icons/ti";
 
 function Navigation() {
   const [open, setOpen] = useState(false);
@@ -21,6 +22,26 @@ function Navigation() {
   const toggleOpen = () => {
     setOpen(!open);
   };
+
+  const [isVisiablity, setVisiablity] = useState(true);
+
+  useEffect(() => {
+    const lasttScrollY = window.scrollY;
+    const controlNavbar = () => {
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > lasttScrollY && currentScrollY > 50) {
+        setVisiablity(false);
+      } else {
+        setVisiablity(true);
+      }
+    };
+
+    window.addEventListener("scroll", controlNavbar);
+
+    return () => {
+      window.removeEventListener("scroll", controlNavbar);
+    };
+  }, []);
 
   const mobileNav = useRef(null);
 
@@ -82,7 +103,9 @@ function Navigation() {
     <div
       className={`w-full h-auto z-10 transition-transform duration-300 ease-linear top-0 fixed`}
     >
-      <div className="flex px-5 py-3 border-b border-white/20 bg-white shadow-lg backdrop-blur-md mx-auto justify-between items-center lg:px-16">
+      <div
+        className={`flex px-5 py-3 border-b border-white/20 bg-white ${isVisiablity ? " " : "opacity-85"} ease-linear duration-200 shadow-lg backdrop-blur-md mx-auto justify-between items-center lg:px-16`}
+      >
         <div ref={logo} className="flex flex-row items-center gap-2">
           <img
             src={FuworxLogo.src}
@@ -99,7 +122,7 @@ function Navigation() {
             <Link
               key={index}
               href={itmes.link}
-              className={`relative  group flex items-center gap-2 md:text-2xl text-lg font-semibold font-head text-[#26638]`}
+              className={`relative  group flex items-center gap-2 text-2xl font-semibold font-head text-[#26638]`}
             >
               <div className="flex cursor-pointer items-center gap-2">
                 <span
@@ -108,13 +131,13 @@ function Navigation() {
                   {itmes.name}
                 </span>
                 {itmes.subMenu && itmes.subMenu.length > 0 && (
-                  <ChevronDown className="group-hover:rotate-180 transition-all duration-200" />
+                  <TiArrowSortedDown className="group-hover:rotate-180 transition-all duration-200" />
                 )}
               </div>
               {itmes.subMenu && (
-                <div className="absolute items-start pt-5 bg-white rounded-3xl left-0 top-full border-b-2 border-b-[#6cc24a] hidden w-[350px] py-5 group-hover:flex flex-col gap-1">
+                <div className="absolute items-start pt-5 bg-white rounded-3xl left-0 top-full border-b-2 border-b-[#6cc24a] hidden w-[300px] py-5 group-hover:flex flex-col gap-1">
                   {itmes.subMenu.map((sub) => (
-                    <div key={sub.name}>
+                    <div key={sub.name} className="pb-2">
                       <Link
                         key={sub.name}
                         href={`${itmes.link}${sub.link}`}
@@ -122,7 +145,7 @@ function Navigation() {
                       >
                         {sub.name}
                       </Link>
-                      <div className="absolute w-[300px] h-1 left-4 rounded-2xl bg-[#6cc24a]"></div>
+                      <div className="absolute w-[270px] h-1 left-4 rounded-2xl bg-[#6cc24a]"></div>
                     </div>
                   ))}
                 </div>

@@ -206,8 +206,8 @@ const IndustriesCarousel: React.FC = () => {
                     <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/50 to-transparent"></div>
                     <div className="absolute inset-0 flex flex-col justify-center items-center mt-8 text-white p-4">
                       {industry.icon}
-                      <div className="bg-blue-500/90 hover:bg-blue-600/90 transition-colors px-4 py-2 rounded-lg backdrop-blur-sm">
-                        <h3 className="text-base font-body md:text-lg max-w-[20ch] font-semibold text-center">
+                      <div className="bg-blue-500/90 hover:bg-blue-600/90 transition-colors px-4 md:px-2 py-2 md:py-0 rounded-lg backdrop-blur-sm">
+                        <h3 className="text-base font-body md:text-lg md:w-[238px] md:h-[72px] md:flex md:items-center md:justify-center font-semibold text-center">
                           {industry.title}
                         </h3>
                       </div>

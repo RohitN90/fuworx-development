@@ -50,19 +50,23 @@ export default function Footer() {
             <ul className="space-y-2 font-body text-lg">
               <li className="flex items-center gap-2  text-gray-600 hover:text-[#0A1F44] cursor-pointer transition">
                 <IoIosArrowForward className="text-xs" />
-                <span>About Us</span>
+                <span onClick={() => router.push("/about/aboutUs")}>
+                  About Us
+                </span>
               </li>
               <li className="flex items-center gap-2  text-gray-600 hover:text-[#0A1F44] cursor-pointer transition">
                 <IoIosArrowForward className="text-xs" />
-                <span>Our Mission</span>
+                <span onClick={() => router.push("/about/ourSupport")}>
+                  Our Supporters
+                </span>
               </li>
               <li className="flex items-center gap-2  text-gray-600 hover:text-[#0A1F44] cursor-pointer transition">
                 <IoIosArrowForward className="text-xs" />
-                <span>Careers</span>
+                <span onClick={() => router.push("/careers")}>Careers</span>
               </li>
               <li className="flex items-center gap-2  text-gray-600 hover:text-[#0A1F44] cursor-pointer transition">
                 <IoIosArrowForward className="text-xs" />
-                <span>Contact Us</span>
+                <span onClick={() => router.push("/contact")}>Contact Us</span>
               </li>
             </ul>
           </div>

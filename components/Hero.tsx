@@ -2,6 +2,7 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Link from "next/link";
 import React, { useRef } from "react";
 
 function Hero() {
@@ -37,13 +38,13 @@ function Hero() {
   return (
     <>
       {/* IMPORTANT: hero wrapper must be relative */}
-      <div className="relative w-full pt-20 md:pt-2 bg-[url(../public/Hero.png)] bg-cover bg-top bg-no-repeat bg-blend-multiply bg-[#002366]/80 md:bg-black/30 h-[700px]">
+      <div className="relative w-full pt-20 md:pt-0 bg-[url(../public/Hero.png)] bg-cover bg-top bg-no-repeat bg-blend-multiply bg-[#002366]/80 md:bg-black/30 h-[700px]">
         {/* HERO CONTENT */}
-        <div className="min-w-[200px] px-11 w-full mx-auto md:max-w-[1200px] flex items-center h-full">
+        <div className="min-w-[200px] px-11 w-full mx-auto md:max-w-[1200px] flex items-center md:h-[520px]">
           <div className="flex flex-col md:flex md:justify-center md:text-center">
             <div
               ref={header}
-              className="md:leading-16 leading-14 text-5xl md:text-[45px] font-bold font-head text-white"
+              className="md:leading-16 leading-14 pt-10 md:pt-0 text-5xl md:text-[45px] font-bold font-head text-white"
             >
               Reimagine Growth Through Digital Innovation
             </div>
@@ -57,9 +58,12 @@ function Hero() {
             </div>
 
             <div ref={but} className="flex mt-4 md:justify-center">
-              <div className="text-[#002366] bg-white/90 font-bold font-head cursor-pointer px-11 py-3 rounded-[50px] text-lg md:text-xl hover:scale-105 duration-200 ease-initial my-6">
+              <Link
+                href="/contact"
+                className="text-[#002366] bg-white/90 font-bold font-head cursor-pointer px-11 py-3 rounded-[50px] text-lg md:text-xl hover:scale-105 duration-200 ease-initial my-6"
+              >
                 Transform with Fuworx
-              </div>
+              </Link>
             </div>
           </div>
         </div>

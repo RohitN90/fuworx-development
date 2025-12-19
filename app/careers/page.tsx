@@ -34,7 +34,7 @@ const CarrerPage = (): React.ReactNode => {
         <div className="font-head font-semibold text-shadow-lg mb-4 text-white text-5xl md:text-7xl lg:text-8xl">
           Careers
         </div>
-        <div className="font-body text-white px-10 lg:px-0 md:max-w-[100ch] text-shadow-lg mt-2 mx-auto text-[20px] text-center">
+        <div className="font-body text-white px-10 lg:px-0 md:max-w-[100ch] text-shadow-lg mt-2 mx-auto text-2xl text-center">
           We’re building a place where people with passion, curiosity, and
           ambition come together to create meaningful change. Here, you won’t
           just do a job-you’ll shape solutions, influence ideas, and contribute
@@ -77,7 +77,7 @@ export default Carres;
 const WhyJoin = (): React.ReactNode => {
   return (
     <>
-      <div className="w-full h-[1200px] px-20  md:h-[1000px] lg:h-svh md:max-w-full  md:mt-16 flex flex-col items-center rounded-b-[300px] shadow-2xl bg-white justify-center">
+      <div className="w-full h-[1200px] px-20  md:h-[1000px] lg:h-auto lg:pb-20 md:max-w-full flex flex-col items-center rounded-b-[300px] md:pt-12 shadow-2xl bg-white">
         <div className="font-head font-semibold text-[#002633] text-[40px] text-center  md:text-5xl">
           Why Join Fuworx
         </div>
@@ -137,7 +137,7 @@ const SubmitResume = (): React.ReactNode => {
 
   return (
     <>
-      <div className="w-full my-10 md:my-12 md:h-screen mt-10 md:max-w-full flex flex-col items-center bg-[#0b1e44]">
+      <div className="w-full my-10 md:my-12 md:h-auto mt-10 md:max-w-full flex flex-col items-center bg-[#0b1e44]">
         <div className="font-head font-semibold text-white text-2xl md:text-5xl">
           Submit Your Resume
         </div>
@@ -171,7 +171,7 @@ const SubmitResume = (): React.ReactNode => {
                   className="w-full px-4 py-2 rounded-lg placeholder:text-white/80 transition outline-none text-white/70"
                   placeholder="Upload Resume"
                 />
-                <div className="px-5 py-1 md:px-14 md:py-3 mr-4 rounded-[50px] font-body font-semibold bg-white/90 text-[#002366]">
+                <div className="px-5 py-1 md:px-14 md:py-3  mr-4 rounded-[50px] font-body font-semibold bg-white/90 text-[#002366]">
                   Upload
                 </div>
               </div>
@@ -181,7 +181,7 @@ const SubmitResume = (): React.ReactNode => {
                 type="text"
                 onChange={handleChange}
                 className="w-full px-4 py-2 rounded-lg border border-slate-500 placeholder:text-white/80 transition outline-none text-white/70"
-                placeholder="Enter your name"
+                placeholder="Preferred Role"
               />
             </div>
             <div className="px-10 flex text-white w-full h-16 md:px-2">
@@ -189,7 +189,7 @@ const SubmitResume = (): React.ReactNode => {
                 type="text"
                 onChange={handleChange}
                 className="w-full px-4 py-2 rounded-lg border border-slate-500 placeholder:text-white/80 transition outline-none text-white/70"
-                placeholder="Enter your name"
+                placeholder="Tell us about yourself"
               />
             </div>
             <div className="w-full flex justify-center items-center h-16 md:px-2 px-10 mt-5">
