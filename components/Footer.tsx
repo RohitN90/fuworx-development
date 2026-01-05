@@ -11,6 +11,7 @@ import FuworxLogo from "@/public/Updated/FUWORX.svg";
 import { useRouter } from "next/navigation";
 import { FaPhoneAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import Link from "next/link";
 export default function Footer() {
   const router = useRouter();
 
@@ -97,11 +98,11 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-2 text-lg text-gray-600 hover:text-[#0A1F44] cursor-pointer transition">
                 <IoIosArrowForward className="text-xs" />
-                <span>Privacy Policy</span>
+                <Link href={"/policy"}>Privacy Policy</Link>
               </li>
               <li className="flex items-center gap-2 text-lg text-gray-600 hover:text-[#0A1F44] cursor-pointer transition">
                 <IoIosArrowForward className="text-xs" />
-                <span>Terms of use</span>
+                <Link href={"/term"}>Terms of use</Link>
               </li>
             </ul>
           </div>
