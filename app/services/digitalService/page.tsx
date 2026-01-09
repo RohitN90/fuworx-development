@@ -9,8 +9,8 @@ const DigitalService = () => {
           <div className="text-6xl text-center text-white lg:text-7xl mt-56 font-head font-semibold">
             Digital Engineering Services
           </div>
-          <div className="absolute -bottom-[50%] rotate-[170deg] -left-[20%] w-[1000px] h-[900px] sm:w-[2200px] sm:h-[1000px] lg:h-[900px]  bg-[#6CC24A] " />
-          <div className="absolute -bottom-[50%] rotate-[10deg] -left-[20%] w-[1000px] h-[800px] sm:w-[2000px] lg:h-[900px]  bg-white " />
+          <div className="absolute -bottom-[50%] rotate-[170deg] -left-[20%] w-[1000px] h-[900px] sm:w-[2200px] sm:h-[1000px] lg:h-[800px] bg-[#6CC24A]" />
+          <div className="absolute -bottom-[50%] rotate-[10deg] -left-[20%] w-[1000px] h-[800px] sm:w-[2300px] lg:h-[870px] bg-white" />
           <div className="absolute left-0 md:text-xl bottom-0 w-full mb-[10%] flex flex-col px-10">
             <div className="text-center text-[#0A1F44] font-body font-semibold max-w-[75ch] mx-auto">
               We engineer intelligent, future ready digital solutions that

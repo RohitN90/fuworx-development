@@ -6,7 +6,6 @@ import { usePathname, useRouter } from "next/navigation";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import Link from "next/link";
-import { ChevronDown } from "lucide-react";
 import { TiArrowSortedDown } from "react-icons/ti";
 
 function Navigation() {
@@ -157,7 +156,7 @@ function Navigation() {
           <div className="bg-[#0A1F44] px-4 py-2 md:px-8 md:py-2 rounded-2xl">
             <Link
               href={"/contact"}
-              className="font-head text-[14px] md:text-[18px] font-bold"
+              className="font-head text-white text-[14px] md:text-[18px] font-bold"
             >
               Contact
             </Link>

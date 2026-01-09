@@ -132,61 +132,74 @@ const Information = () => {
       <div className="font-bold font-head text-5xl py-10 md:py-3">
         Information or posting of content
       </div>
-      <div className="text-wrap text-lg font-body w-full">
-        Our Website may contain certain forms in which you may be required to
-        fill in certain information such as name, contact number, email address,
-        etc. We maintain complete privacy with respect to the information shared
-        with us. To understand how we secure the privacy of information of our
-        users, please read our Privacy Policy. During the course of using this
-        Website, users may provide information which may be visible to certain
-        other users. You understand and agree that posting or uploading
-        comments, materials and content on the Website including without
-        limitation feedback and other communications irrespective of their
-        nature shall be deemed to be non-confidential and you hereby grant us a
-        royalty-free, non-exclusive, perpetual, irrevocable transferable license
-        (with the right to sublicense) to use, copy, publicly perform, publicly
-        display, reformat, translate, excerpt (in whole or in part) and
-        distribute such content for any purpose, commercial, advertising, or
-        otherwise, on or in connection with this Website or the promotion
-        thereof, to prepare derivative works of, or incorporate into other
-        works, such content, and to grant and authorize sub-licenses of the
-        foregoing. Additionally, you understand and agree that Fuworx retains
-        the right to excerpt, translate or reformat any materials submitted by
-        you. You understand and agree that Fuworx is free to depict, distribute
-        and publicly display such materials, communications and feedback without
-        any kind of limitation or obligation including without limitation the
-        details of the user. By accepting these terms, you agree that Fuworx
-        shall have the right to use any concepts, ideas, know-how or techniques
-        contained in such materials or communications or feedback for any
-        purpose. You further agree to hold Fuworx, its directors, agents,
-        officers, employees, affiliates, partners, successors, assigns and
-        representatives indemnified against all or any claim(s) of copyright
-        infringement or defamation, obscenity and/or the violation of other
-        applicable laws. You agree that any uploading or sharing any on our
-        Website is at your own risk and you understand and agree that all
-        information including but not limited to content, text, photograph or
-        video which is publicly posted or uploaded or shared or privately
-        transmitted through this Website is the sole responsibility of the
-        person from whom such content originated and that Fuworx shall not be
-        liable for any errors or omissions in any content. By uploading or
-        sharing any content on our Website, you warrant and represent to us that
-        you have the right to do so. We do not warrant the authenticity or
-        correctness of any data provided by the users about themselves. You
-        further grant us the right to use the content uploaded by you in any
-        manner whatsoever and agree to hold Fuworx, its directors, agents,
-        officers, employees, affiliates, partners, successors, assigns and
-        representatives indemnified against all or any claim(s) of copyright
-        infringement or defamation, obscenity and/or the violation of other
-        applicable laws. In any event, we completely reserve the discretion to
-        determine the nature of the content uploaded by the user on the website,
-        to screen, filter and/or monitor information provided by you and to
-        edit, refuse to distribute and/or to remove the same immediately without
-        prior notice without prejudice to any of the rights under law to invoke
-        appropriate legal action against you, if we reasonably believe at any
-        point of time that the content may be subjected to any claims of
-        infringement of intellectual property rights or privacy or rights of any
-        third- party, defamation or obscenity or the violation of any applicable
-        local laws
+      <div className="text-wrap text-lg flex flex-col gap-2 items-start text-[#0a1f44] font-body w-full">
+        <div>
+          Our Website may contain certain forms in which you may be required to
+          fill in certain information such as name, contact number, email
+          address, etc. We maintain complete privacy with respect to the
+          information shared with us.
+        </div>
+        <div>
+          To understand how we secure the privacy of information of our users,
+          please read our Privacy Policy. During the course of using this
+          Website, users may provide information which may be visible to certain
+          other users.
+        </div>
+        <div>
+          You understand and agree that posting or uploading comments, materials
+          and content on the Website including without limitation feedback and
+          other communications irrespective of their nature shall be deemed to
+          be non-confidential and you hereby grant us a royalty-free,
+          non-exclusive, perpetual, irrevocable transferable license (with the
+          right to sublicense) to use, copy, publicly perform, publicly display,
+          reformat, translate, excerpt (in whole or in part) and distribute such
+          content for any purpose, commercial, advertising, or otherwise, on or
+          in connection with this Website or the promotion thereof, to prepare
+          derivative works of, or incorporate into other works, such content,
+          and to grant and authorize sub-licenses of the foregoing.
+          Additionally, you understand and agree that Fuworx retains the right
+          to excerpt, translate or reformat any materials submitted by you. You
+          understand and agree that Fuworx is free to depict, distribute and
+          publicly display such materials, communications and feedback without
+          any kind of limitation or obligation including without limitation the
+          details of the user.
+        </div>{" "}
+        <div>
+          By accepting these terms, you agree that Fuworx shall have the right
+          to use any concepts, ideas, know-how or techniques contained in such
+          materials or communications or feedback for any purpose. You further
+          agree to hold Fuworx, its directors, agents, officers, employees,
+          affiliates, partners, successors, assigns and representatives
+          indemnified against all or any claim(s) of copyright infringement or
+          defamation, obscenity and/or the violation of other applicable laws.
+          You agree that any uploading or sharing any on our Website is at your
+          own risk and you understand and agree that all information including
+          but not limited to content, text, photograph or video which is
+          publicly posted or uploaded or shared or privately transmitted through
+          this Website is the sole responsibility of the person from whom such
+          content originated and that Fuworx shall not be liable for any errors
+          or omissions in any content.
+        </div>
+        <div>
+          By uploading or sharing any content on our Website, you warrant and
+          represent to us that you have the right to do so. We do not warrant
+          the authenticity or correctness of any data provided by the users
+          about themselves. You further grant us the right to use the content
+          uploaded by you in any manner whatsoever and agree to hold Fuworx, its
+          directors, agents, officers, employees, affiliates, partners,
+          successors, assigns and representatives indemnified against all or any
+          claim(s) of copyright infringement or defamation, obscenity and/or the
+          violation of other applicable laws. In any event, we completely
+          reserve the discretion to determine the nature of the content uploaded
+          by the user on the website, to screen, filter and/or monitor
+          information provided by you and to edit, refuse to distribute and/or
+          to remove the same immediately without prior notice without prejudice
+          to any of the rights under law to invoke appropriate legal action
+          against you, if we reasonably believe at any point of time that the
+          content may be subjected to any claims of infringement of intellectual
+          property rights or privacy or rights of any third- party, defamation
+          or obscenity or the violation of any applicable local laws
+        </div>
       </div>
     </div>
   );
