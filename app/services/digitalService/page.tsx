@@ -3,16 +3,16 @@ import Connect from "@/components/Connect";
 import React from "react";
 const DigitalService = () => {
   return (
-    <div className="w-full h-auto">
+    <div className="w-full h-auto mt-20">
       <div className="w-full h-auto flex flex-col justify-center items-center">
         <div className="relative w-full h-screen flex ds0 px-5 justify-center overflow-hidden">
-          <div className="text-6xl text-center text-white lg:text-7xl mt-56 font-head font-semibold">
+          <div className="text-6xl text-center text-white lg:text-6xl mt-[50%] lg:mt-[10%] font-head font-semibold">
             Digital Engineering Services
           </div>
-          <div className="absolute -bottom-[50%] rotate-[170deg] -left-[20%] w-[1000px] h-[900px] sm:w-[2200px] sm:h-[1000px] lg:h-[800px] bg-[#6CC24A]" />
-          <div className="absolute -bottom-[50%] rotate-[10deg] -left-[20%] w-[1000px] h-[800px] sm:w-[2300px] lg:h-[870px] bg-white" />
-          <div className="absolute left-0 md:text-xl bottom-0 w-full mb-[10%] flex flex-col px-10">
-            <div className="text-center text-[#0A1F44] font-body font-semibold max-w-[75ch] mx-auto">
+          <div className="absolute -bottom-[50%] -mb-[50px] lg:m-0 rotate-[173deg] -left-[20%] w-[1000px] h-[900px] sm:w-[180%] sm:h-[180%] lg:h-[90%] bg-[#6CC24A]" />
+          <div className="absolute -bottom-[50%] rotate-[4deg] -left-[20%] w-[1000px] h-[800px] sm:w-[180%] lg:h-[90%] bg-white" />
+          <div className="absolute left-0 md:text-lg bottom-0 w-full mb-[4%] flex flex-col gap-2 px-10">
+            <div className="text-center text-[#0A1F44] text-xl font-body font-semibold max-w-[75ch] mx-auto">
               We engineer intelligent, future ready digital solutions that
               seamlessly fuse business strategy with emerging technologies.
             </div>
@@ -24,7 +24,7 @@ const DigitalService = () => {
             </div>
           </div>
         </div>
-        <div className="w-full h-auto flex flex-col">
+        <div className="w-full h-auto flex bg-white gap-5 lg:gap-0 flex-col">
           <Management
             heading="Enterprise Automation"
             description="We automate enterprise workflows and systems to eliminate inefficiencies,reduce costs, and enable faster, smarter business operations at scale."
@@ -106,9 +106,9 @@ const Management = (props: Props) => {
 
 const ReManagement = (props: Props) => {
   return (
-    <div className="w-full h-auto lg:h-[435px] grid">
+    <div className="w-full h-auto lg:h-[435px] grid border border-[#002336]">
       <div className="w-full h-auto text-white flex flex-col lg:grid items-center lg:grid-cols-2">
-        <div className={`w-full h-full ${props.image} bg-yellow-500`}></div>
+        <div className={`w-full h-[435px] lg:h-full ${props.image} bg-yellow-500`}></div>
         <div className="w-full h-full flex flex-col pt-10 lg:pt-0 gap-3 bg-linear-to-r from-[#0A1F44] to-[#55698D] justify-center text-left px-10">
           <div className="text-4xl font-head font-semibold">
             {props.heading}
