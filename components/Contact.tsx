@@ -118,7 +118,7 @@ ${data.message}
               <input
                 type="text"
                 id="name"
-                placeholder="John Doe"
+                placeholder="Enter your name"
                 {...register("name", {
                   required: "Name is required",
                   minLength: {
@@ -148,7 +148,7 @@ ${data.message}
               <input
                 type="email"
                 id="email"
-                placeholder="john@example.com"
+                placeholder="Enter your email"
                 {...register("email", {
                   required: "Email is required",
                   pattern: {
@@ -178,7 +178,7 @@ ${data.message}
               <input
                 type="tel"
                 id="phone"
-                placeholder="+1 (555) 000-0000"
+                placeholder="Enter your phone number"
                 {...register("phone", {
                   pattern: {
                     value: /^[+]?[(]?[0-9]{3}[)]?[-\s.]?[0-9]{3}[-\s.]?[0-9]{4,6}$/,
@@ -207,7 +207,7 @@ ${data.message}
               <input
                 type="text"
                 id="company"
-                placeholder="Acme Corp"
+                placeholder="Enter your company name"
                 {...register("company")}
                 className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition outline-none text-slate-900"
               />

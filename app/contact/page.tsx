@@ -128,7 +128,7 @@ const ContactCard = () => {
               <div className="text-[20px] w-full">
                 <p className="font-medium mb-2">Fuworx Innovations Pvt. Ltd.</p>
                 <p className="text-gray-300 leading-relaxed">
-                  4th Floor, Biznuss Square,
+                  4th Floor, Bizness Square,
                   <br />
                   Jubilee Enclave Road,
                   <br />
@@ -269,7 +269,7 @@ const ContactForm = (): React.ReactNode => {
           <input
             type="text"
             id="name"
-            placeholder="John Doe"
+            placeholder="Enter your name"
             {...register("name", {
               required: "Name is required",
               minLength: {
@@ -293,7 +293,7 @@ const ContactForm = (): React.ReactNode => {
           <input
             type="email"
             id="email"
-            placeholder="john@example.com"
+            placeholder="Enter your email"
             {...register("email", {
               required: "Email is required",
               pattern: {
@@ -317,7 +317,7 @@ const ContactForm = (): React.ReactNode => {
           <input
             type="tel"
             id="phone"
-            placeholder="+1 (555) 000-0000"
+            placeholder="Enter your phone number"
             {...register("phone", {
               pattern: {
                 value: /^[+]?[(]?[0-9]{3}[)]?[-\s.]?[0-9]{3}[-\s.]?[0-9]{4,6}$/,
