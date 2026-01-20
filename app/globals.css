@@ -35,7 +35,7 @@
   }
 
   .carrers {
-    @apply bg-[url(../public/Updated/careers.jpg)];
+    @apply bg-[url(../public/Updated/careers.jpg)] opacity-75;
   }
 
   .term {
@@ -53,7 +53,7 @@
   }
 
   .b0 {
-    @apply bg-[url(../public/business-images/0b53961f2a190c5eaeaefdf29a99b183d6ffe738.webp)] bg-cover bg-center bg-blend-multiply bg-[#002366]/60;
+    @apply bg-[url(../public/business-images/0b53961f2a190c5eaeaefdf29a99b183d6ffe738.webp)] bg-cover bg-center bg-blend-multiply bg-[#0A1F44]/70 opacity-85;
   }
 
   .b1 {
@@ -85,7 +85,7 @@
   }
 
   .ds0 {
-    @apply bg-[url(../public/DES-Images/DES0.webp)] bg-cover bg-center bg-blend-multiply bg-[#002366]/90;
+    @apply bg-[url(../public/DES-Images/DES0.webp)] bg-cover bg-center bg-blend-multiply bg-[#0A1F44]/70 opacity-85;
   }
 
   .ds1 {
@@ -115,11 +115,11 @@
   }
 
   .support {
-    @apply bg-[url(../public/Updated/supports.jpg)];
+    @apply bg-[url(../public/Updated/supports.jpg)] opacity-85;
   }
 
   .contact {
-    @apply bg-[url(../public/Updated/contactImg.jpg)];
+    @apply bg-[url(../public/Updated/contactImg.jpg)] opacity-90;
   }
 
   .vision-clip {

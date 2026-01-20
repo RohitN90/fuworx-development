@@ -14,7 +14,7 @@ const SupportPage = (): React.ReactNode => {
   return (
     <>
       <div
-        className={`w-full h-[800px] md:h-screen bg-auto flex flex-col justify-center bg-blend-multiply bg-[#002366] items-center bg-top bg-no-repeat relative support`}
+        className={`w-full h-[800px] md:h-screen bg-auto flex flex-col justify-center bg-blend-multiply bg-[#0A1F44]/90 items-center bg-top bg-no-repeat relative support`}
       >
         <div className="font-head px-10 text-center font-semibold text-shadow-lg mb-4 text-white text-5xl md:text-7xl lg:text-8xl">
           Our Supporters

@@ -1,10 +1,9 @@
 import React from "react";
+import WorkInProgress from "@/components/WorkInProgress";
 const Product = () => {
   return (
-    <div className="w-full h-screen flex justify-center items-center">
-      <div className="text-3xl font-body text-center font-">
-        Work-in Progress....
-      </div>
+    <div className="w-full h-auto flex flex-col">
+      <WorkInProgress />
     </div>
   );
 };

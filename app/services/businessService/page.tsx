@@ -76,13 +76,13 @@ const Management = (props: Props) => {
     <div className="w-full h-auto lg:h-[435px] grid">
       <div className="w-full h-auto text-white flex flex-col lg:grid items-center lg:grid-cols-2">
         <div className="w-full h-full flex flex-col gap-3 bg-linear-to-r from-[#0A1F44] to-[#55698D] justify-center text-left px-10">
-          <div className="text-4xl font-head font-semibold">
+          <div className="text-4xl font-head uppercase font-semibold">
             {props.heading}
           </div>
           <div className="font-body text-[18px] max-w-[60ch]">
             {props.description}
           </div>
-          <div className="bg-[#6CC24A] w-64 py-3 text-lg font-bold items-center text-center">
+          <div className="bg-[#6CC24A] w-60 py-2 text-lg font-semibold items-center text-center">
             Read More
           </div>
         </div>
@@ -100,13 +100,13 @@ const ReManagement = (props: Props) => {
       <div className="w-full h-auto text-white flex flex-col lg:grid items-center lg:grid-cols-2">
         <div className={`w-full h-[435px] lg:h-full ${props.image} bg-yellow-500`}></div>
         <div className="w-full h-full flex flex-col gap-3 bg-linear-to-r from-[#0A1F44] to-[#55698D] justify-center text-left px-10">
-          <div className="text-4xl font-head font-semibold">
+          <div className="text-4xl uppercase font-head font-semibold">
             {props.heading}
           </div>
           <div className="font-body text-[18px] max-w-[60ch]">
             {props.description}
           </div>
-          <div className="bg-[#6CC24A] w-64 py-3 text-lg font-bold items-center text-center">
+          <div className="bg-[#6CC24A] w-60 py-2 text-lg font-semibold items-center text-center">
             Read More
           </div>
         </div>

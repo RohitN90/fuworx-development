@@ -29,7 +29,7 @@ const CarrerPage = (): React.ReactNode => {
   return (
     <>
       <div
-        className={`w-full h-[800px] md:h-screen bg-cover flex flex-col justify-center bg-blend-multiply bg-[#002366]/80 items-center bg-bottom bg-no-repeat relative carrers`}
+        className={`w-full h-[800px] md:h-screen bg-cover flex flex-col justify-center bg-blend-multiply bg-[#0A1F44]/75 items-center bg-bottom bg-no-repeat relative carrers`}
       >
         <div className="font-head font-semibold text-shadow-lg mb-4 text-white text-5xl md:text-7xl lg:text-8xl">
           Careers

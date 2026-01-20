@@ -38,7 +38,7 @@ function Hero() {
   return (
     <>
       {/* IMPORTANT: hero wrapper must be relative */}
-      <div className="relative w-full pt-20 md:pt-0 bg-[url(../public/Hero.webp)] bg-cover bg-top bg-no-repeat bg-blend-multiply bg-[#002366]/80 md:bg-black/30 h-[700px]">
+      <div className="relative w-full pt-20 md:pt-0 bg-[url(../public/Hero.webp)] bg-cover bg-top bg-no-repeat bg-blend-multiply bg-[#002366]/80 md:bg-black/30 h-[730px]">
         {/* HERO CONTENT */}
         <div className="min-w-[200px] px-11 w-full mx-auto md:max-w-[1200px] flex items-center justify-center md:h-[520px]">
           <div className="flex flex-col md:flex md:justify-center md:text-center">
@@ -51,13 +51,13 @@ function Hero() {
 
             <div
               ref={text}
-              className="text-[16px] md:text-[18px] py-2 text-white/95 md:max-w-[700px] mx-auto font-body"
+              className="text-[16px] md:text-[18px] pt-2 text-white/95 md:max-w-[700px] mx-auto font-body"
             >
               We design intelligent, efficient, and customized IT systems that
               elevate how your business operates and grows.
             </div>
 
-            <div ref={but} className="flex mt-4 md:justify-center">
+            <div ref={but} className="flex md:justify-center">
               <Link
                 href="/contact"
                 className="text-[#002366] bg-white/90 font-bold font-head cursor-pointer px-11 py-3 rounded-[50px] text-lg md:text-xl hover:scale-105 duration-200 ease-initial my-6"

@@ -15,10 +15,10 @@ const PrivacyPolicy = () => {
 const Policy = () => {
   return (
     <div className="relative flex flex-col w-full justify-center gap-5 items-center h-screen text-white text-2xl">
-      <div className="text-center font-bold font-head text-7xl">
+      <div className="text-center font-bold font-head text-6xl">
         Privacy Policy
       </div>
-      <div className="text-center text-[16px] md:text-lg font-body w-full px-10 md:max-w-[1300px]">
+      <div className="text-center text-[16px] md:text-[16px] font-body w-full px-10 md:max-w-[1300px]">
         Fuworx Innovations Privated Limited has created this Privacy Policy in
         order to demonstrate its commitment in respecting the privacy of its
         user(s) and protecting your personal information received during the use
@@ -36,10 +36,10 @@ const Policy = () => {
 const Information = () => {
   return (
     <div className="flex flex-col w-full bg-white gap-5 px-10 py-5 md:py-20 md:px-20 items-left h-auto text-black text-2xl">
-      <div className="font-bold font-head text-5xl">
+      <div className="font-bold font-head text-4xl">
         Collection and the purpose for which information may be collected
       </div>
-      <div className="text-wrap text-lg font-body md:max-w-[1300px]">
+      <div className="text-wrap text-[16px] font-body md:max-w-[1300px]">
         We collect personal information by lawful and fair means and, wherever
         appropriate, with the knowledge or consent of the provider of such data
         or information. <br></br>
@@ -95,10 +95,10 @@ const Information = () => {
 const DateSecurity = () => {
   return (
     <div className="flex flex-col w-full gap-5 md:py-10 px-10 py-10 md:px-20 h-auto text-white text-2xl">
-      <div className="text-left font-bold mt-16 font-head text-5xl">
+      <div className="text-left font-bold mt-16 font-head text-4xl">
         Data security and retention
       </div>
-      <div className="text-wrap flex flex-col gap-4 text-lg w-full text-left font-body">
+      <div className="text-wrap flex flex-col gap-4 text-[16px] w-full text-left font-body">
         We protect your personal information by reasonable security safeguards
         against loss or theft, as well as unauthorized access, disclosure,
         copying, use or modification. However, we do not guarantee nor assume
@@ -120,10 +120,10 @@ const DateSecurity = () => {
 const Sharing = () => {
   return (
     <div className="flex flex-col w-full bg-white gap-5 px-10 py-5 md:py-20 md:px-20 items-left h-auto text-black text-2xl">
-      <div className="font-bold font-head text-5xl">
+      <div className="font-bold font-head text-4xl">
         Third party information sharing
       </div>
-      <div className="text-wrap text-lg font-body md:max-w-[1300px]">
+      <div className="text-wrap text-[16px] font-body md:max-w-[1300px]">
         This website may contain links to other sites which are not operated or
         controlled by us. Our Privacy Policy and procedures based herein apply
         to our website and we do not claim any responsibility for the privacy
@@ -174,10 +174,10 @@ const Reviewing = () => {
   return (
     <div className="text-white  w-full flex flex-col gap-5 px-10 py-5 md:py-20 md:px-20 items-left h-auto">
       <div>
-        <div className="font-bold font-head text-5xl py-10 md:py-3">
+        <div className="font-bold font-head text-4xl py-10 md:py-3">
           Accessing, reviewing and/or correction of information
         </div>
-        <div className="text-wrap text-lg font-body md:max-w-[1300px]">
+        <div className="text-wrap text-[16px] font-body md:max-w-[1300px]">
           At your request, we shall allow you to review and to correct any
           inaccuracies or amend any deficient data/information, which you have
           shared with us. However, we do not take responsibility for the
@@ -188,10 +188,10 @@ const Reviewing = () => {
         </div>
       </div>
       <div>
-        <div className="font-bold font-head text-5xl py-10 md:py-3">
+        <div className="font-bold font-head text-4xl py-10 md:py-3">
           Anti-spam check
         </div>
-        <div className="text-wrap text-lg font-body md:max-w-[1300px]">
+        <div className="text-wrap text-[16px] font-body md:max-w-[1300px]">
           All emails sent to us are subject to spam check. If we suspect that
           such emails are spam or fraudulent, we reserve our right to reject
           such emails and initiate such action against the sender which may
@@ -200,10 +200,10 @@ const Reviewing = () => {
         </div>
       </div>
       <div>
-        <div className="font-bold font-head text-5xl py-10 md:py-3">
+        <div className="font-bold font-head text-4xl py-10 md:py-3">
           Changes to this policy
         </div>
-        <div className="text-wrap text-lg font-body md:max-w-[1300px]">
+        <div className="text-wrap text-[16px] font-body md:max-w-[1300px]">
           We are committed to conducting our business in accordance with the
           principles outlined in the website Terms and Conditions of use and the
           Privacy Policy in order to ensure that the confidentiality of personal

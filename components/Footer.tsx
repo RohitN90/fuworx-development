@@ -6,12 +6,12 @@ import {
   FaLocationDot,
   FaXTwitter,
 } from "react-icons/fa6";
-import { IoIosArrowForward } from "react-icons/io";
 import FuworxLogo from "@/public/Updated/FUWORX.svg";
 import { useRouter } from "next/navigation";
 import { FaPhoneAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import Link from "next/link";
+import { TbTarget } from "react-icons/tb";
 export default function Footer() {
   const router = useRouter();
 
@@ -50,23 +50,23 @@ export default function Footer() {
             </h3>
             <ul className="space-y-2 font-body text-lg">
               <li className="flex items-center gap-2  text-gray-600 hover:text-[#0A1F44] cursor-pointer transition">
-                <IoIosArrowForward className="text-xs" />
+                <TbTarget className="text-xs" />
                 <span onClick={() => router.push("/about/aboutUs")}>
                   About Us
                 </span>
               </li>
               <li className="flex items-center gap-2  text-gray-600 hover:text-[#0A1F44] cursor-pointer transition">
-                <IoIosArrowForward className="text-xs" />
+                <TbTarget className="text-xs" />
                 <span onClick={() => router.push("/about/ourSupport")}>
                   Our Supporters
                 </span>
               </li>
               <li className="flex items-center gap-2  text-gray-600 hover:text-[#0A1F44] cursor-pointer transition">
-                <IoIosArrowForward className="text-xs" />
+                <TbTarget className="text-xs" />
                 <span onClick={() => router.push("/careers")}>Careers</span>
               </li>
               <li className="flex items-center gap-2  text-gray-600 hover:text-[#0A1F44] cursor-pointer transition">
-                <IoIosArrowForward className="text-xs" />
+                <TbTarget className="text-xs" />
                 <span onClick={() => router.push("/contact")}>Contact Us</span>
               </li>
             </ul>
@@ -79,12 +79,12 @@ export default function Footer() {
             </h3>
             <ul className="space-y-2 mb-6">
               <li className="flex items-center gap-2 text-lg text-gray-600 hover:text-[#0A1F44] cursor-pointer transition">
-                <IoIosArrowForward className="text-xs" />
-                <span>Digital Engineering Services</span>
+                <TbTarget className="text-xs" />
+                <Link href={"/services/digitalService"}>Digital Engineering Services</Link>
               </li>
               <li className="flex items-center gap-2 text-lg text-gray-600 hover:text-[#0A1F44] cursor-pointer transition">
-                <IoIosArrowForward className="text-xs" />
-                <span>Business Services</span>
+                <TbTarget className="text-xs" />
+                <Link href={"/services/businessService"}>Business Services</Link>
               </li>
             </ul>
 
@@ -93,15 +93,15 @@ export default function Footer() {
             </h3>
             <ul className="space-y-2">
               <li className="flex items-center gap-2 text-lg text-gray-600 hover:text-[#0A1F44] cursor-pointer transition">
-                <IoIosArrowForward className="text-xs" />
+                <TbTarget className="text-xs" />
                 <span>Blogs</span>
               </li>
               <li className="flex items-center gap-2 text-lg text-gray-600 hover:text-[#0A1F44] cursor-pointer transition">
-                <IoIosArrowForward className="text-xs" />
+                <TbTarget className="text-xs" />
                 <Link href={"/policy"}>Privacy Policy</Link>
               </li>
               <li className="flex items-center gap-2 text-lg text-gray-600 hover:text-[#0A1F44] cursor-pointer transition">
-                <IoIosArrowForward className="text-xs" />
+                <TbTarget className="text-xs" />
                 <Link href={"/term"}>Terms of use</Link>
               </li>
             </ul>
@@ -125,13 +125,13 @@ export default function Footer() {
               </div>
               <div>
                 <p className="flex items-center gap-2 text-lg text-gray-600">
-                  <MdEmail className="text-xs" />
+                  <MdEmail className="text-lg " />
                   <span>info@fuworx.com</span>
                 </p>
               </div>
               <div>
                 <p className="flex items-center gap-2 text-lg text-gray-600">
-                  <FaPhoneAlt className="text-xs" />
+                  <FaPhoneAlt className="text-lg" />
                   <span>+91-8919980393</span>
                 </p>
               </div>

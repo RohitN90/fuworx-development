@@ -11,11 +11,6 @@ const AboutUs = () => {
       <StoryFocus />
       <section className="bg-white pb-28">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <img
-            src={`${Target.src}`}
-            alt="Target focus"
-            className="rounded-2xl shadow-lg w-full object-cover"
-          />
 
           <div>
             <h2 className="text-4xl font-bold font-head text-[#6fbf4a] mb-6">
@@ -35,6 +30,11 @@ const AboutUs = () => {
               on innovation, growth, and building the future.
             </p>
           </div>
+          <img
+            src={`${Target.src}`}
+            alt="Target focus"
+            className="rounded-2xl shadow-lg w-full object-cover"
+          />
         </div>
       </section>
       <BusinessCard />
@@ -159,7 +159,7 @@ const AboutSvg = () => {
         {/* Main Container */}
         <div className="relative w-full min-h-screen lg:min-h-[600px] flex flex-col sm:flex-row">
           {/* Vision Section - Left Side */}
-          <div className="w-full sm:w-1/2 bg-gradient-to-br from-[#0f2a4d] to-[#1a3a5c] text-white flex items-center justify-center px-6 sm:px-8 md:px-10 py-12 sm:py-16 relative">
+          <div className="w-full sm:w-1/2 bg-linear-to-br from-[#0f2a4d] to-[#1a3a5c] text-white flex items-center justify-center px-6 sm:px-8 md:px-10 py-12 sm:py-16 relative">
             <div className="max-w-sm w-full">
               <h1 className="text-4xl sm:text-5xl md:text-5xl font-bold mb-6 sm:mb-8 font-serif">
                 Our Vision
@@ -209,7 +209,7 @@ const AboutSvg = () => {
           </svg>
 
           {/* Mission Section - Right Side */}
-          <div className="w-full sm:w-1/2 bg-gradient-to-bl from-[#5ec34f] to-[#7dd66f] text-white flex items-center justify-center px-6 sm:px-8 md:px-10 py-12 sm:py-16 relative">
+          <div className="w-full sm:w-1/2 bg-linear-to-bl from-[#5ec34f] to-[#7dd66f] text-white flex items-center justify-center px-6 sm:px-8 md:px-10 py-12 sm:py-16 relative">
             <div className="max-w-sm w-full">
               <h1 className="text-4xl sm:text-5xl md:text-5xl font-bold mb-6 sm:mb-8 font-serif">
                 Our Mission
@@ -271,10 +271,6 @@ const BusinessCard = () => {
       className={`min-h-[80vh] flex px-10 md:px-36 bg-cover bg-blend-multiply bg-[#002366]/80 items-center business`}
     >
       <div className="flex flex-col">
-        <p className="text-green-400 text-[20px] font-head mb-4">
-          Reach us today !
-        </p>
-
         <h1 className="text-white text-4xl md:text-6xl font-body font-bold leading-tight mb-8">
           Fuworx : Your Smart <br />
           Partner for Business <br />
@@ -283,7 +279,7 @@ const BusinessCard = () => {
 
         <button
           onClick={navigateToContact}
-          className="bg-blue-500 max-w-[400px] mx-auto hover:bg-blue-600 transition text-white px-7 py-3 rounded-lg shadow-lg"
+          className="bg-linear-to-r from-[#8ACDFF] via-[#3E719D] to-[#0A1F44] max-w-[200px] hover:bg-blue-600 font-semibold font-body transition text-white px-7 py-3 rounded-lg shadow-lg"
         >
           Contact us
         </button>

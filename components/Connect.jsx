@@ -10,7 +10,7 @@ const Connect = () => {
 
         <div className="text-center text-sm lg:text-lg  text-white">
           Fuworx helps organizations unlock performance, intelligence, and
-          measurable outcomes␍through purpose-built digital and business
+          measurable outcomes through purpose-built digital and business
           solutions.
         </div>
 

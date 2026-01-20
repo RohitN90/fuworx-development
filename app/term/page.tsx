@@ -21,10 +21,10 @@ export default TermOfUse;
 const Terms = () => {
   return (
     <div className="relative flex flex-col w-full justify-center gap-5 items-center h-screen text-white text-2xl">
-      <div className="text-center font-bold font-head text-7xl">
+      <div className="text-center font-bold font-head text-6xl">
         Terms of use
       </div>
-      <div className="text-center text-[16px] md:text-lg font-body w-full px-10 md:max-w-[1300px]">
+      <div className="text-center text-[16px] md:text-[16px] font-body w-full px-10 md:max-w-[1300px]">
         By accessing this Website, www.fuworx.com (the “Website”) owned by
         Fuworx Innovations Private Limited (“Fuworx, “We”, “Us”, “Our”), the
         User ( “You or “Your”) agrees to be bound by these Website “Terms and
@@ -46,8 +46,8 @@ const Terms = () => {
 const UseOfWebsite = () => {
   return (
     <div className="flex flex-col w-full bg-white gap-5 px-10 py-5 md:py-20 md:px-20 items-left h-auto text-black text-2xl">
-      <div className="font-bold font-head text-5xl">Use of the Website</div>
-      <div className="text-wrap text-lg font-body md:max-w-[1300px]">
+      <div className="font-bold font-head text-4xl">Use of the Website</div>
+      <div className="text-wrap text-[16px] font-body md:max-w-[1300px]">
         Subject to the website Terms and Conditions of Use, Fuworx grants to the
         user a non- exclusive, non- transferable, limited license to access the
         website and the materials therein. You agree that you shall use and
@@ -76,10 +76,10 @@ const UseOfWebsite = () => {
 const UnderstandAndAgree = () => {
   return (
     <div className="flex flex-col w-full gap-5 md:py-10 px-10 py-10 md:px-20 h-auto text-white text-2xl">
-      <div className="text-left font-bold mt-16 font-head text-5xl">
+      <div className="text-left font-bold mt-16 font-head text-4xl">
         You also understand and agree not to
       </div>
-      <ul className="text-wrap flex flex-col gap-4 text-lg w-full text-left font-body">
+      <ul className="text-wrap flex flex-col gap-4 text-[16px] w-full text-left font-body">
         <li>
           Modify, merge, alter or copy or assist the modification or copying of
           the materials or contents available on our Website or web pages,
@@ -116,7 +116,7 @@ const UnderstandAndAgree = () => {
           may be available to Fuworx under the applicable laws.
         </li>
       </ul>
-      <div className="font-body font-semibold text-lg bg-[#002366]/60 rounded-2xl px-10 py-5">
+      <div className="font-body font-semibold text-[16px] bg-[#002366]/60 rounded-2xl px-10 py-5">
         Any violation of the foregoing shall vest in Fuworx the right to
         initiate appropriate legal action against you as per the provisions of
         applicable laws in force in India and to obtain such remedies as may be
@@ -129,10 +129,10 @@ const UnderstandAndAgree = () => {
 const Information = () => {
   return (
     <div className="flex flex-col w-full gap-5 md:py-10 bg-white px-10 py-10 md:px-20 h-auto text-black text-2xl">
-      <div className="font-bold font-head text-5xl py-10 md:py-3">
+      <div className="font-bold font-head text-4xl py-10 md:py-3">
         Information or posting of content
       </div>
-      <div className="text-wrap text-lg flex flex-col gap-2 items-start text-[#0a1f44] font-body w-full">
+      <div className="text-wrap text-[16px] flex flex-col gap-2 items-start text-[#0a1f44] font-body w-full">
         <div>
           Our Website may contain certain forms in which you may be required to
           fill in certain information such as name, contact number, email
@@ -208,10 +208,10 @@ const Information = () => {
 const UnderstandAndAgreeNotTo = () => {
   return (
     <div className="flex flex-col w-full gap-5 px-10 py-5 md:py-20 md:px-20 items-left h-auto text-white text-2xl">
-      <div className="font-bold font-head text-5xl">
+      <div className="font-bold font-head text-4xl">
         You understand and agree not to use this website to:
       </div>
-      <ul className="text-wrap flex flex-col gap-4 text-lg w-full text-left font-body">
+      <ul className="text-wrap flex flex-col gap-4 text-[16px] w-full text-left font-body">
         <li>
           <span className="font-semibold"> (a) </span> Upload, post, e-mail,
           transmit or otherwise make available any content- (a) which is
@@ -245,10 +245,10 @@ const Disclamer = () => {
   return (
     <div className="bg-white text-[#002366] w-full flex flex-col gap-5 px-10 py-5 md:py-20 md:px-20 items-left h-auto">
       <div>
-        <div className="font-bold text-black font-head text-5xl py-10 md:py-3">
+        <div className="font-bold text-black font-head text-4xl py-10 md:py-3">
           Disclaimer of the warranty
         </div>
-        <div className="text-wrap text-lg font-body md:max-w-[1300px]">
+        <div className="text-wrap text-[16px] font-body md:max-w-[1300px]">
           The information, content, materials on the website are provided on an
           “as is” and “as available” basis. Fuworx makes no representations or
           warranties of any kind, expressed or implied, about the suitability,
@@ -270,10 +270,10 @@ const Disclamer = () => {
         </div>
       </div>
       <div>
-        <div className="font-bold text-black font-head text-5xl py-10 md:py-3">
+        <div className="font-bold text-black font-head text-4xl py-10 md:py-3">
           Limitation of liability
         </div>
-        <div className="text-wrap text-lg font-body md:max-w-[1300px]">
+        <div className="text-wrap text-[16px] font-body md:max-w-[1300px]">
           In no event shall Fuworx or its suppliers be liable for any damages
           (including, without limitation, damages for loss of data or profit, or
           due to business interruption) arising out of the use or inability to
@@ -286,10 +286,10 @@ const Disclamer = () => {
         </div>
       </div>
       <div>
-        <div className="font-bold font-head text-black text-5xl py-10 md:py-3">
+        <div className="font-bold font-head text-black text-4xl py-10 md:py-3">
           Revisions and errata
         </div>
-        <div className="text-wrap text-lg font-body md:max-w-[1300px]">
+        <div className="text-wrap text-[16px] font-body md:max-w-[1300px]">
           The materials appearing on the website may contain technical,
           typographical, or photographic errors. Fuworx does not warrant that
           any of the materials on its website are accurate, complete, or
@@ -299,10 +299,10 @@ const Disclamer = () => {
         </div>
       </div>
       <div>
-        <div className="font-bold font-head text-black text-5xl py-10 md:py-3">
+        <div className="font-bold font-head text-black text-4xl py-10 md:py-3">
           Links to third-party websites
         </div>
-        <div className="text-wrap text-lg font-body md:max-w-[1300px]">
+        <div className="text-wrap text-[16px] font-body md:max-w-[1300px]">
           Fuworx does not endorse the content of any/all of the third party
           websites linked to its Website, neither takes any responsibility and
           is not responsible for the contents of any such linked website. The
@@ -337,10 +337,10 @@ const Disclamer = () => {
         </div>
       </div>
       <div>
-        <div className="font-bold text-black font-head text-5xl py-10 md:py-3">
+        <div className="font-bold text-black font-head text-4xl py-10 md:py-3">
           Log files
         </div>
-        <div className="text-wrap text-lg font-body md:max-w-[1300px]">
+        <div className="text-wrap text-[16px] font-body md:max-w-[1300px]">
           We use IP addresses to analyze trends, administer the website, track
           user’s movement, and gather broad demographic information for
           aggregate use. IP addresses are not linked to personally identifiable
@@ -355,10 +355,10 @@ const Disclamer = () => {
         </div>
       </div>
       <div>
-        <div className="font-bold font-head text-5xl text-black py-10 md:py-3">
+        <div className="font-bold font-head text-4xl text-black py-10 md:py-3">
           Cookies
         </div>
-        <div className="text-wrap text-lg font-body md:max-w-[1300px]">
+        <div className="text-wrap text-[16px] font-body md:max-w-[1300px]">
           Like most other interactive websites Fuworx uses cookies to retrieve
           user details for each visit. Cookies are used in some areas of our
           website to enable the functionality of the specific area and ease of
@@ -366,10 +366,10 @@ const Disclamer = () => {
         </div>
       </div>
       <div>
-        <div className="font-bold font-head text-5xl text-black py-10 md:py-3">
+        <div className="font-bold font-head text-4xl text-black py-10 md:py-3">
           Intellectual property
         </div>
-        <div className="text-wrap text-lg font-body md:max-w-[1300px]">
+        <div className="text-wrap text-[16px] font-body md:max-w-[1300px]">
           All material, content, software, text, images, graphics, video and
           audio presentations on this website is the exclusive property of
           Fuworx. Except as indicated otherwise, you may view, copy, download
@@ -391,10 +391,10 @@ const Disclamer = () => {
         </div>
       </div>
       <div>
-        <div className="font-bold text-black font-head text-5xl py-10 md:py-3">
+        <div className="font-bold text-black font-head text-4xl py-10 md:py-3">
           Force majeure
         </div>
-        <div className="text-wrap text-lg font-body md:max-w-[1300px]">
+        <div className="text-wrap text-[16px] font-body md:max-w-[1300px]">
           Fuworx shall not be liable to you for any failure to perform any
           obligation under these terms which is due to an event beyond the
           control of Fuworx including but not limited to any Act of God,
@@ -413,10 +413,10 @@ const Disclamer = () => {
         </div>
       </div>
       <div>
-        <div className="font-bold font-head text-5xl text-black py-10 md:py-3">
+        <div className="font-bold font-head text-4xl text-black py-10 md:py-3">
           Indemnification
         </div>
-        <div className="text-wrap text-lg font-body md:max-w-[1300px]">
+        <div className="text-wrap text-[16px] font-body md:max-w-[1300px]">
           By accepting these Website Terms and Conditions of Use , you agree to
           indemnify and hold harmless Fuworx and its partners, subsidiaries,
           affiliates, directors, agents, and employees, representatives,
@@ -432,20 +432,20 @@ const Disclamer = () => {
         </div>
       </div>
       <div>
-        <div className="font-bold font-head text-5xl text-black py-10 md:py-3">
+        <div className="font-bold font-head text-4xl text-black py-10 md:py-3">
           Waiver
         </div>
-        <div className="text-wrap text-lg font-body md:max-w-[1300px]">
+        <div className="text-wrap text-[16px] font-body md:max-w-[1300px]">
           A mere failure by Fuworx to exercise a legal right or remedy provided
           by these Terms and Conditions of Use shall not be constitute a waiver
           of Fuworx’s right.
         </div>
       </div>
       <div>
-        <div className="font-bold font-head text-black text-5xl py-10 md:py-3">
+        <div className="font-bold font-head text-black text-4xl py-10 md:py-3">
           Severability
         </div>
-        <div className="text-wrap text-lg font-body md:max-w-[1300px]">
+        <div className="text-wrap text-[16px] font-body md:max-w-[1300px]">
           If any part or provision in these Terms and Conditions of Use is found
           to be unenforceable or invalid, such part shall not affect the rest of
           the parts of these Terms and Conditions of Use and the Disclaimer, and
@@ -454,10 +454,10 @@ const Disclamer = () => {
         </div>
       </div>
       <div>
-        <div className="font-bold  text-black font-head text-5xl py-10 md:py-3">
+        <div className="font-bold  text-black font-head text-4xl py-10 md:py-3">
           Website Terms and Conditions of Use modifications
         </div>
-        <div className="text-wrap text-lg font-body md:max-w-[1300px]">
+        <div className="text-wrap text-[16px] font-body md:max-w-[1300px]">
           <div>
             Fuworx may revise these Terms and Conditions of Use for its Website
             at any time without notice. By using this Website you agree to be
@@ -467,10 +467,10 @@ const Disclamer = () => {
           </div>
         </div>
         <div>
-          <div className="font-bold text-black font-head text-5xl py-10 md:py-3">
+          <div className="font-bold text-black font-head text-4xl py-10 md:py-3">
             Contact information
           </div>
-          <div className="text-wrap text-lg font-body md:max-w-[1300px]">
+          <div className="text-wrap text-[16px] font-body md:max-w-[1300px]">
             If you have any questions, or comments about our Terms and
             Conditions of Use or Privacy Policy or would like to raise any
             complaints/grievances, you can contact us via{" "}

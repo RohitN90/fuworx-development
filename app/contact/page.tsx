@@ -11,8 +11,8 @@ import {
 const Contact = () => {
   return (
     <div className=" relative bg-white">
-      <div className="relative w-full px-10 py-20 mt-20 h-[650px] bg-blend-multiply bg-[#002366]/90 flex flex-col gap-5 items-center contact bg-cover bg-top-left">
-        <div className="text-white font-head text-center lg:text-left text-5xl md:text-6xl font-semibold">
+      <div className="relative w-full px-10 py-20 mt-20 h-[650px] bg-blend-multiply bg-[#0A1F44] flex flex-col gap-5 items-center contact bg-cover bg-top-left">
+        <div className="text-white font-head text-center lg:text-center text-4xl md:text-[55px] font-semibold">
           Contact Us Let’s Build Something Great Together
         </div>
 
@@ -38,9 +38,9 @@ const Contact = () => {
 
 const ContactCard = () => {
   return (
-    <section className="py-20 px-4 w-auto xl:w-[550px] bg-[#002366] relative overflow-hidden xl:rounded-4xl">
-      <div className="absolute bottom-0 right-0 w-50 h-50 bg-green-500 rounded-full transform translate-x-10 -translate-y-[55px]"></div>
-      <div className="absolute bottom-0 opacity-10 right-0 w-50 h-50 bg-green-500 rounded-full transform -translate-x-[45px] -translate-y-[95px]"></div>
+    <section className="py-20 px-4 w-auto xl:w-[550px] bg-[#0A1F44] relative overflow-hidden xl:rounded-4xl">
+      <div className="absolute bottom-0 right-11 w-50 h-50 bg-green-500 rounded-full transform translate-x-10 -translate-y-[55px]"></div>
+      <div className="absolute bottom-0 opacity-10 right-10 w-50 h-50 bg-green-500 rounded-full transform -translate-x-[45px] -translate-y-[95px]"></div>
       <div className="xl:max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="w-full md:max-w-2xl">
           <h2 className="text-5xl font-bold text-white mb-12 text-center">
