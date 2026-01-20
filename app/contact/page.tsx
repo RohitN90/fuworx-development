@@ -1,6 +1,6 @@
 "use client";
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
+import { useForm } from "react-hook-form";
 import {
   FaInstagram,
   FaLinkedinIn,
@@ -29,7 +29,7 @@ const Contact = () => {
         <ContactForm />
       </div>
 
-      <div className="xl:absolute w-full pt-12 xl:pl-20 left-0 md:bottom-40">
+      <div className="xl:absolute w-full md:w-auto pt-12 xl:pl-20 left-0 md:bottom-40">
         <ContactCard />
       </div>
     </div>
@@ -187,74 +187,188 @@ interface FormData {
 }
 
 const ContactForm = (): React.ReactNode => {
-  const [formData, setFormData] = useState<FormData>({
-    name: "",
-    email: "",
-    phone: "",
-    message: "",
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isSubmitting },
+    reset,
+  } = useForm<FormData>({
+    mode: "onBlur",
+    defaultValues: {
+      name: "",
+      email: "",
+      phone: "",
+      message: "",
+    },
   });
 
-  const handleChange = (
-    e: React.ChangeEvent<
-      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-    >,
-  ) => {
-    const target = e.target as HTMLInputElement;
-    const { name, value, type, checked } = target;
-    setFormData({ ...formData, [name]: type === "checkbox" ? checked : value });
+  const [submitStatus, setSubmitStatus] = useState<{
+    type: "success" | "error" | null;
+    message: string;
+  }>({ type: null, message: "" });
+
+  const onSubmit = async (data: FormData) => {
+    try {
+      setSubmitStatus({ type: null, message: "" });
+
+      // Replace with your actual API endpoint
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        setSubmitStatus({
+          type: "success",
+          message: "Thank you! Your message has been sent successfully.",
+        });
+        reset();
+      } else {
+        setSubmitStatus({
+          type: "error",
+          message: "Failed to send message. Please try again.",
+        });
+      }
+    } catch (error) {
+      setSubmitStatus({
+        type: "error",
+        message: "An error occurred. Please try again later.",
+      });
+      console.error("Form submission error:", error);
+    }
   };
 
   return (
     <div className="relative flex flex-col w-full justify-center h-auto items-center xl:items-end px-10 md:px-20">
-      <form className="w-full flex flex-col justify-center items-center gap-4 md:max-w-[800px] xl:w-[500px] 2xl:w-[700px]">
+      <form
+        onSubmit={handleSubmit(onSubmit)}
+        className="w-full flex flex-col justify-center items-center gap-4 md:max-w-[800px] xl:w-[500px] 2xl:w-[700px]"
+      >
         <div className="text-[#002366] my-10 font-head font-semibold text-center text-5xl">
           Quick Contact Form
         </div>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          required
-          value={formData.name}
-          onChange={handleChange}
-          className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition outline-none text-slate-900"
-          placeholder="John Doe"
-        />
-        <input
-          type="email"
-          id="email"
-          name="email"
-          required
-          value={formData.email}
-          onChange={handleChange}
-          className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition outline-none text-slate-900"
-          placeholder="john@example.com"
-        />
-        <input
-          type="tel"
-          id="phone"
-          name="phone"
-          value={formData.phone}
-          onChange={handleChange}
-          className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition outline-none text-slate-900"
-          placeholder="+1 (555) 000-0000"
-        />
-        <textarea
-          id="message"
-          name="message"
-          required
-          value={formData.message}
-          onChange={handleChange}
-          rows={2}
-          className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition outline-none resize-none text-slate-900"
-          placeholder="Tell us more about your inquiry..."
-        />
-        <div className="pt-4">
+
+        {/* Status Messages */}
+        {submitStatus.type && (
+          <div
+            className={`w-full p-3 rounded-lg text-sm font-medium text-white ${
+              submitStatus.type === "success"
+                ? "bg-green-500"
+                : "bg-red-500"
+            }`}
+          >
+            {submitStatus.message}
+          </div>
+        )}
+
+        {/* Name Field */}
+        <div className="w-full">
+          <input
+            type="text"
+            id="name"
+            placeholder="John Doe"
+            {...register("name", {
+              required: "Name is required",
+              minLength: {
+                value: 2,
+                message: "Name must be at least 2 characters",
+              },
+            })}
+            className={`w-full px-4 py-2 rounded-lg border transition outline-none text-slate-900 ${
+              errors.name
+                ? "border-red-500 focus:border-red-500 focus:ring-2 focus:ring-red-200"
+                : "border-slate-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200"
+            }`}
+          />
+          {errors.name && (
+            <p className="text-red-500 text-sm mt-1">{errors.name.message}</p>
+          )}
+        </div>
+
+        {/* Email Field */}
+        <div className="w-full">
+          <input
+            type="email"
+            id="email"
+            placeholder="john@example.com"
+            {...register("email", {
+              required: "Email is required",
+              pattern: {
+                value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                message: "Invalid email address",
+              },
+            })}
+            className={`w-full px-4 py-2 rounded-lg border transition outline-none text-slate-900 ${
+              errors.email
+                ? "border-red-500 focus:border-red-500 focus:ring-2 focus:ring-red-200"
+                : "border-slate-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200"
+            }`}
+          />
+          {errors.email && (
+            <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>
+          )}
+        </div>
+
+        {/* Phone Field */}
+        <div className="w-full">
+          <input
+            type="tel"
+            id="phone"
+            placeholder="+1 (555) 000-0000"
+            {...register("phone", {
+              pattern: {
+                value: /^[+]?[(]?[0-9]{3}[)]?[-\s.]?[0-9]{3}[-\s.]?[0-9]{4,6}$/,
+                message: "Invalid phone number",
+              },
+            })}
+            className={`w-full px-4 py-2 rounded-lg border transition outline-none text-slate-900 ${
+              errors.phone
+                ? "border-red-500 focus:border-red-500 focus:ring-2 focus:ring-red-200"
+                : "border-slate-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200"
+            }`}
+          />
+          {errors.phone && (
+            <p className="text-red-500 text-sm mt-1">{errors.phone.message}</p>
+          )}
+        </div>
+
+        {/* Message Field */}
+        <div className="w-full">
+          <textarea
+            id="message"
+            rows={2}
+            placeholder="Tell us more about your inquiry..."
+            {...register("message", {
+              required: "Message is required",
+              minLength: {
+                value: 10,
+                message: "Message must be at least 10 characters",
+              },
+            })}
+            className={`w-full px-4 py-2 rounded-lg border transition outline-none resize-none text-slate-900 ${
+              errors.message
+                ? "border-red-500 focus:border-red-500 focus:ring-2 focus:ring-red-200"
+                : "border-slate-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200"
+            }`}
+          />
+          {errors.message && (
+            <p className="text-red-500 text-sm mt-1">
+              {errors.message.message}
+            </p>
+          )}
+        </div>
+
+        {/* Submit Button */}
+        <div className="pt-4 w-full">
           <button
             type="submit"
-            className="w-full bg-[#002366] text-white/09 px-8 py-4 rounded-lg text-lg font-semibold hover:from-blue-700 hover:to-blue-800 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+            disabled={isSubmitting}
+            className="w-full bg-[#002366] text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            Send Message
+            {isSubmitting ? "Sending..." : "Send Message"}
           </button>
         </div>
       </form>
