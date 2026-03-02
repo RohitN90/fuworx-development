@@ -1,33 +1,42 @@
+'use client'
+import Collections from "@/components/Collections";
+import Connect from "@/components/Connect";
 import PartnerCard from "@/components/PartnerCard";
+import shopify from "@/public/images/shopify.png"
+import odoo from "@/public/images/odoo.png"
+import zapier from "@/public/images/zapier.png"
 import react from "react";
+import PartnershipForm from "@/components/PartnerShipForm";
 
 const Partners = () => {
   return (
     <div className="w-full h-auto mt-20 bg-white">
       <PartnerHero />
-      <div className="w-full py-20 grid grid-cols-3 gap-6 mx-auto max-w-[1200px]">
+      <div className="w-full flex flex-col px-10 py-10 md:grid md:grid-cols-3 gap-6 mx-auto max-w-[1200px]">
         <PartnerCard
           description="Powering Unified Business Operations with Intelligent Odoo Solutions"
           logoAlt="oddo url"
-          logoUrl=""
-          customBg=""
-          hasArrow
+          logoUrl={odoo.src}
         />
         <PartnerCard
           description="Powering Unified Business Operations with Intelligent Odoo Solutions"
-          logoAlt="oddo url"
-          logoUrl=""
-          customBg=""
-          hasArrow
+          logoAlt="shopify"
+          logoUrl={shopify.src}
         />
         <PartnerCard
           description="Powering Unified Business Operations with Intelligent Odoo Solutions"
-          logoAlt="oddo url"
-          logoUrl=""
-          customBg=""
-          hasArrow
+          logoAlt="zapier"
+          logoUrl={zapier.src}
         />
       </div>
+      <PartnershipForm />
+
+        <div className="w-full h-auto flex">
+          <Collections />
+        </div>
+        <div className="w-full h-auto flex">
+          <Connect />
+        </div>
     </div>
   );
 };

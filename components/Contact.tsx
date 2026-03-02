@@ -133,7 +133,9 @@ ${data.message}
                 }`}
               />
               {errors.name && (
-                <p className="text-red-500 text-sm mt-1">{errors.name.message}</p>
+                <p className="text-red-500 text-sm mt-1">
+                  {errors.name.message}
+                </p>
               )}
             </div>
 
@@ -163,7 +165,9 @@ ${data.message}
                 }`}
               />
               {errors.email && (
-                <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>
+                <p className="text-red-500 text-sm mt-1">
+                  {errors.email.message}
+                </p>
               )}
             </div>
 
@@ -181,7 +185,8 @@ ${data.message}
                 placeholder="Enter your phone number"
                 {...register("phone", {
                   pattern: {
-                    value: /^[+]?[(]?[0-9]{3}[)]?[-\s.]?[0-9]{3}[-\s.]?[0-9]{4,6}$/,
+                    value:
+                      /^[+]?[(]?[0-9]{3}[)]?[-\s.]?[0-9]{3}[-\s.]?[0-9]{4,6}$/,
                     message: "Invalid phone number",
                   },
                 })}
@@ -192,7 +197,9 @@ ${data.message}
                 }`}
               />
               {errors.phone && (
-                <p className="text-red-500 text-sm mt-1">{errors.phone.message}</p>
+                <p className="text-red-500 text-sm mt-1">
+                  {errors.phone.message}
+                </p>
               )}
             </div>
 
@@ -240,7 +247,9 @@ ${data.message}
               <option value="partnership">Partnership Opportunity</option>
             </select>
             {errors.enquiry && (
-              <p className="text-red-500 text-sm mt-1">{errors.enquiry.message}</p>
+              <p className="text-red-500 text-sm mt-1">
+                {errors.enquiry.message}
+              </p>
             )}
           </div>
 
@@ -270,7 +279,9 @@ ${data.message}
               }`}
             />
             {errors.message && (
-              <p className="text-red-500 text-sm mt-1">{errors.message.message}</p>
+              <p className="text-red-500 text-sm mt-1">
+                {errors.message.message}
+              </p>
             )}
           </div>
 
@@ -293,10 +304,10 @@ ${data.message}
                 htmlFor="consent"
                 className="text-sm font-body text-slate-600 cursor-pointer"
               >
-                By checking this box, I provide my consent to FUWORX to process my
-                submitted data and receive appropriate business communications. I
-                am aware that FUWORX uses my data for the purposes mentioned in
-                their privacy policy.
+                By checking this box, I provide my consent to FUWORX to process
+                my submitted data and receive appropriate business
+                communications. I am aware that FUWORX uses my data for the
+                purposes mentioned in their privacy policy.
               </label>
               {errors.consent && (
                 <p className="text-red-500 text-sm mt-1">

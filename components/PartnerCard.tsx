@@ -1,41 +1,60 @@
-import Image from 'next/image';
+"use client";
+import Image from "next/image";
+import { useState } from "react";
 
 interface PartnerCardProps {
   logoUrl: string;
   logoAlt: string;
   description: string;
-  hasArrow?: boolean;
   customBg?: string;
 }
 
-export default function PartnerCard({ logoUrl, logoAlt, description, hasArrow, customBg = "bg-white" }: PartnerCardProps) {
+export default function PartnerCard({
+  logoUrl,
+  logoAlt,
+  description,
+  customBg = "bg-white",
+}: PartnerCardProps) {
+  const [logo, setLogo] = useState<boolean>();
+  const handleMouseEnter = () => {
+    setLogo(true);
+  };
+  const handleMouseLeave = () => {
+    setLogo(false);
+  };
   return (
-    <div 
-      className={`relative flex flex-col justify-between border border-gray-200 rounded-xl p-6 min-h-[220px] ${customBg}`}
+    <div
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      className={`relative flex hover:scale-105 shadow transition-all ease-in duration-300 hover:shadow-2xl flex-col justify-between border border-gray-200 rounded-xl p-6 min-h-[220px] ${customBg}`}
     >
       {/* Optional Green Arrow Icon */}
-      {hasArrow && (
-        <div className="absolute top-4 right-4 bg-[#63C15D] rounded-full w-8 h-8 flex items-center justify-center shadow-sm">
-          <svg 
-            xmlns="http://www.w3.org/2000/svg" 
-            className="h-4 w-4 text-white" 
-            fill="none" 
-            viewBox="0 0 24 24" 
-            stroke="currentColor" 
+      {logo && (
+        <div className="absolute flex top-4 right-4 bg-[#63C15D] transition-all ease-in duration-200 rounded-full w-10 h-10 items-center justify-center shadow-sm">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-5 w-5  text-white"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
             strokeWidth={2.5}
           >
-            <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
+            />
           </svg>
         </div>
       )}
 
       {/* Logo Section */}
-      <div className="mt-4 mb-8">
-        <div className="relative h-12 w-32">
+      <div className="mt-4 mb-4">
+        <div className="relative h-14 w-36">
           {/* Note: Update the width/height to best match your actual logo asset dimensions */}
-          <Image 
-            src={logoUrl} 
-            alt={logoAlt} 
+          <Image
+            src={logoUrl}
+            alt={logoAlt}
             fill
             className="object-contain object-left"
           />
